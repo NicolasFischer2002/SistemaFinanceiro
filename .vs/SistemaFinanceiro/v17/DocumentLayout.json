@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\forminicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\forminicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\forminicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\forminicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\forminicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\formdinamicoconteudo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,13 +63,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "FormInicial.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormInicial.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FormInicial.cs",
               "ToolTip": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormInicial.cs",
               "RelativeToolTip": "Apresentacao\\FormInicial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAlwBMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T13:25:18.857Z",
               "IsPinned": true,
@@ -77,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FormDashboard.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormDashboard.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FormDashboard.cs",
@@ -85,12 +85,11 @@
               "RelativeToolTip": "Apresentacao\\FormDashboard.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T15:48:32.402Z",
-              "IsPinned": true,
-              "EditorCaption": " [Projeto]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FormDashboard.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormDashboard.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FormDashboard.cs",
@@ -99,12 +98,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T15:52:54.192Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FormReceitas.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FormReceitas.cs",
@@ -112,12 +110,11 @@
               "RelativeToolTip": "Apresentacao\\FormReceitas.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T15:59:43.818Z",
-              "IsPinned": true,
-              "EditorCaption": " [Projeto]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormReceitas.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FormReceitas.cs",
@@ -126,8 +123,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T16:21:16.682Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",

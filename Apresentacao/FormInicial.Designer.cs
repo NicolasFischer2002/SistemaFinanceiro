@@ -147,6 +147,7 @@
             Controls.Add(PnlMenuLateral);
             Name = "FormInicial";
             Text = "Form1";
+            Load += FormInicial_Load;
             PnlMenuLateral.ResumeLayout(false);
             PnlLogoMenuLateral.ResumeLayout(false);
             PnlLogoMenuLateral.PerformLayout();

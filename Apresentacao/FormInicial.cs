@@ -15,6 +15,12 @@ namespace SistemaFinanceiro
             InicializarGUIMenuLateral();
         }
 
+        private void FormInicial_Load(object sender, EventArgs e)
+        {
+            // Simula o clique no botão Dashboard assim que o form abrir
+            BtnDashboard.PerformClick();
+        }
+
         private void InicializarGUIFormInicial()
         {
             PnlMenuLateral.Padding = new Padding(20, 0, 20, 0);
@@ -37,30 +43,6 @@ namespace SistemaFinanceiro
             InicializarLinhaSeparacao(PnlLinhaRodape);
 
             InicializarBtnMenuLateral(BtnDashboard, BtnDespesas, BtnReceitas);
-        }
-
-        private void DestacarBotao(Button botaoClicado)
-        {
-            // Cor de fundo que você quer para o selecionado
-            var corDestaque = ColorTranslator.FromHtml("#0D6EFD");
-
-            foreach (var btn in BotoesMenuLateral)
-            {
-                // Define o BackColor normal
-                var isSelecionado = btn == botaoClicado;
-
-                btn.BackColor = isSelecionado
-                    ? corDestaque
-                    : Color.Transparent;
-
-                // Redefine também as cores de hover / mouse-down
-                btn.FlatAppearance.MouseOverBackColor = isSelecionado
-                    ? corDestaque
-                    : Color.Transparent;
-                btn.FlatAppearance.MouseDownBackColor = isSelecionado
-                    ? corDestaque
-                    : Color.Transparent;
-            }
         }
 
         private void InicializarSessaoLogo()
@@ -106,12 +88,6 @@ namespace SistemaFinanceiro
             }
         }
 
-        private void BtnDashboard_Click(object sender, EventArgs e)
-        {
-            DestacarBotao(BtnDashboard);
-            AbrirFormularioNoPanel(new FormDashboard());
-        }
-
         private void AbrirFormularioNoPanel(Form formulario)
         {
             // Se já existe um formulário aberto, fecha
@@ -131,6 +107,12 @@ namespace SistemaFinanceiro
             formulario.Show();
         }
 
+        private void BtnDashboard_Click(object sender, EventArgs e)
+        {
+            DestacarBotao(BtnDashboard);
+            AbrirFormularioNoPanel(new FormDashboard());
+        }
+
         private void BtnDespesas_Click(object sender, EventArgs e)
         {
             DestacarBotao(BtnDespesas);
@@ -141,6 +123,30 @@ namespace SistemaFinanceiro
         {
             DestacarBotao(BtnReceitas);
             AbrirFormularioNoPanel(new FormReceitas());
+        }
+
+        private void DestacarBotao(Button botaoClicado)
+        {
+            // Cor de fundo que você quer para o selecionado
+            var corDestaque = ColorTranslator.FromHtml("#0D6EFD");
+
+            foreach (var btn in BotoesMenuLateral)
+            {
+                // Define o BackColor normal
+                var isSelecionado = btn == botaoClicado;
+
+                btn.BackColor = isSelecionado
+                    ? corDestaque
+                    : Color.Transparent;
+
+                // Redefine também as cores de hover / mouse-down
+                btn.FlatAppearance.MouseOverBackColor = isSelecionado
+                    ? corDestaque
+                    : Color.Transparent;
+                btn.FlatAppearance.MouseDownBackColor = isSelecionado
+                    ? corDestaque
+                    : Color.Transparent;
+            }
         }
     }
 }
