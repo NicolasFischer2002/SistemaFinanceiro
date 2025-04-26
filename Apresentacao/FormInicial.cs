@@ -3,12 +3,13 @@ namespace SistemaFinanceiro
     public partial class FormInicial : Form
     {
         private Button[] BotoesMenuLateral;
+        private Form? FormularioAtivo = null;
 
         public FormInicial()
         {
             InitializeComponent();
 
-            BotoesMenuLateral = [BtnDashboard, BtnDespesas, BtnReceitas]; 
+            BotoesMenuLateral = [BtnDashboard, BtnDespesas, BtnReceitas];
 
             InicializarGUIFormInicial();
             InicializarGUIMenuLateral();
@@ -36,20 +37,6 @@ namespace SistemaFinanceiro
             InicializarLinhaSeparacao(PnlLinhaRodape);
 
             InicializarBtnMenuLateral(BtnDashboard, BtnDespesas, BtnReceitas);
-            AtribuirEventosBotoesMenuLateral();
-        }
-
-        private void AtribuirEventosBotoesMenuLateral()
-        {
-            EventoBtnDashboard();
-        }
-
-        private void EventoBtnDashboard()
-        {
-            BtnDashboard.Click += (s, e) =>
-            {
-                DestacarBotao(BtnDashboard);
-            };
         }
 
         private void DestacarBotao(Button botaoClicado)
@@ -61,7 +48,7 @@ namespace SistemaFinanceiro
             {
                 // Define o BackColor normal
                 var isSelecionado = btn == botaoClicado;
-                
+
                 btn.BackColor = isSelecionado
                     ? corDestaque
                     : Color.Transparent;
@@ -117,6 +104,43 @@ namespace SistemaFinanceiro
 
                 button.Cursor = Cursors.Hand;
             }
+        }
+
+        private void BtnDashboard_Click(object sender, EventArgs e)
+        {
+            DestacarBotao(BtnDashboard);
+            AbrirFormularioNoPanel(new FormDashboard());
+        }
+
+        private void AbrirFormularioNoPanel(Form formulario)
+        {
+            // Se já existe um formulário aberto, fecha
+            if (FormularioAtivo != null)
+                FormularioAtivo.Close();
+
+            FormularioAtivo = formulario;
+
+            // Configura o formulário para se comportar como "controle" dentro do painel
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+
+            // Adiciona no Panel e exibe
+            PnlTelaDinamica.Controls.Clear();
+            PnlTelaDinamica.Controls.Add(formulario);
+            formulario.Show();
+        }
+
+        private void BtnDespesas_Click(object sender, EventArgs e)
+        {
+            DestacarBotao(BtnDespesas);
+            AbrirFormularioNoPanel(new FormDespesas());
+        }
+
+        private void BtnReceitas_Click(object sender, EventArgs e)
+        {
+            DestacarBotao(BtnReceitas);
+            AbrirFormularioNoPanel(new FormReceitas());
         }
     }
 }

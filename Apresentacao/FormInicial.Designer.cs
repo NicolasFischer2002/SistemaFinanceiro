@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            PnlCentral = new Panel();
-            PnlTelaDinamica = new Panel();
             PnlMenuLateral = new Panel();
             BtnReceitas = new Button();
             BtnDespesas = new Button();
@@ -39,27 +37,10 @@
             PnlRodapeMenuLateral = new Panel();
             PnlLogoMenuLateral = new Panel();
             LblTitulo = new Label();
-            PnlCentral.SuspendLayout();
+            PnlTelaDinamica = new Panel();
             PnlMenuLateral.SuspendLayout();
             PnlLogoMenuLateral.SuspendLayout();
             SuspendLayout();
-            // 
-            // PnlCentral
-            // 
-            PnlCentral.Controls.Add(PnlTelaDinamica);
-            PnlCentral.Dock = DockStyle.Fill;
-            PnlCentral.Location = new Point(0, 0);
-            PnlCentral.Name = "PnlCentral";
-            PnlCentral.Size = new Size(1395, 724);
-            PnlCentral.TabIndex = 0;
-            // 
-            // PnlTelaDinamica
-            // 
-            PnlTelaDinamica.Dock = DockStyle.Fill;
-            PnlTelaDinamica.Location = new Point(0, 0);
-            PnlTelaDinamica.Name = "PnlTelaDinamica";
-            PnlTelaDinamica.Size = new Size(1395, 724);
-            PnlTelaDinamica.TabIndex = 0;
             // 
             // PnlMenuLateral
             // 
@@ -84,6 +65,7 @@
             BtnReceitas.TabIndex = 6;
             BtnReceitas.Text = "Receitas";
             BtnReceitas.UseVisualStyleBackColor = true;
+            BtnReceitas.Click += BtnReceitas_Click;
             // 
             // BtnDespesas
             // 
@@ -93,6 +75,7 @@
             BtnDespesas.TabIndex = 5;
             BtnDespesas.Text = "Despesas";
             BtnDespesas.UseVisualStyleBackColor = true;
+            BtnDespesas.Click += BtnDespesas_Click;
             // 
             // BtnDashboard
             // 
@@ -102,6 +85,7 @@
             BtnDashboard.TabIndex = 4;
             BtnDashboard.Text = "Dashboard";
             BtnDashboard.UseVisualStyleBackColor = true;
+            BtnDashboard.Click += BtnDashboard_Click;
             // 
             // PnlLinhaRodape
             // 
@@ -145,16 +129,24 @@
             LblTitulo.TabIndex = 0;
             LblTitulo.Text = "Sistema Financeiro";
             // 
+            // PnlTelaDinamica
+            // 
+            PnlTelaDinamica.BackColor = SystemColors.ActiveCaption;
+            PnlTelaDinamica.Dock = DockStyle.Fill;
+            PnlTelaDinamica.Location = new Point(350, 0);
+            PnlTelaDinamica.Name = "PnlTelaDinamica";
+            PnlTelaDinamica.Size = new Size(1045, 724);
+            PnlTelaDinamica.TabIndex = 2;
+            // 
             // FormInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1395, 724);
+            Controls.Add(PnlTelaDinamica);
             Controls.Add(PnlMenuLateral);
-            Controls.Add(PnlCentral);
             Name = "FormInicial";
             Text = "Form1";
-            PnlCentral.ResumeLayout(false);
             PnlMenuLateral.ResumeLayout(false);
             PnlLogoMenuLateral.ResumeLayout(false);
             PnlLogoMenuLateral.PerformLayout();
@@ -162,10 +154,7 @@
         }
 
         #endregion
-
-        private Panel PnlCentral;
         private Panel PnlMenuLateral;
-        private Panel PnlTelaDinamica;
         private Panel PnlLogoMenuLateral;
         private Panel PnlRodapeMenuLateral;
         private Panel PnlLinhaLogo;
@@ -174,5 +163,6 @@
         private Button BtnReceitas;
         private Button BtnDespesas;
         private Label LblTitulo;
+        private Panel PnlTelaDinamica;
     }
 }
