@@ -4,15 +4,15 @@
     {
         public CategoriaReceita CategoriaReceita { get; private set; }
         public DateTime DataRecebimento { get; private set; }
-        public int IdTipoPagamento { get; private set; }
+        public TipoPagamento TipoPagamento { get; private set; }
 
-        public Receita(int id, StatusTransacao statusTransacao, decimal valor, string? descricao,
-            CategoriaReceita categoriaReceita, DateTime dataRecebimento, int idTipoPagamento)
-            : base(id, statusTransacao, valor, descricao)
+        public Receita(StatusTransacao statusTransacao, decimal valor, string? descricao, int quantidadeParcelas,
+            CategoriaReceita categoriaReceita, DateTime dataRecebimento, TipoPagamento tipoPagamento)
+            : base(statusTransacao, valor, quantidadeParcelas, descricao)
         {
             CategoriaReceita = categoriaReceita;
             DataRecebimento = dataRecebimento;
-            IdTipoPagamento = idTipoPagamento;
+            TipoPagamento = tipoPagamento;
         }
 
         public override Task Atualizar()

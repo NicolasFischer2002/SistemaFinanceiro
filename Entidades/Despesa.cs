@@ -1,22 +1,21 @@
-﻿
-namespace SistemaFinanceiro.Entidades
+﻿namespace SistemaFinanceiro.Entidades
 {
     internal class Despesa : Transacao
     {
         public CategoriaDespesa CategoriaDespesa { get; private set; }
         public DateTime DataVencimento { get; private set; }
         public DateTime? DataPagamento { get; private set; }
-        public int IdTipoPagamento { get; private set; }
+        public TipoPagamento TipoPagamento { get; private set; }
 
-        public Despesa(int id, StatusTransacao statusTransacao, decimal valor, string? descricao,
+        public Despesa(StatusTransacao statusTransacao, decimal valor, int quantidadeParcelas, string? descricao,
             CategoriaDespesa categoriaDespesa, DateTime dataVencimento,
-            DateTime? dataPagamento, int idTipoPagamento)
-            : base(id, statusTransacao, valor, descricao)
+            DateTime? dataPagamento, TipoPagamento tipoPagamento)
+            : base(statusTransacao, valor, quantidadeParcelas, descricao)
         {
             CategoriaDespesa = categoriaDespesa;
             DataVencimento = dataVencimento;
             DataPagamento = dataPagamento;
-            IdTipoPagamento = idTipoPagamento;
+            TipoPagamento = tipoPagamento;
         }
 
         public override Task Atualizar()
