@@ -18,3 +18,7 @@ C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\Siste
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Release\net8.0-windows\SistemaFinanceiro.sourcelink.json
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Release\net8.0-windows\SistemaFinanceiro.FormDespesas.resources
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Release\net8.0-windows\SistemaFinanceiro.FormReceitas.resources
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Release\net8.0-windows\SistemaFinanceiro.Properties.Resources.resources
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Release\net8.0-windows\Apresentacao\Imagens\icone_dashboard.png
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Release\net8.0-windows\Apresentacao\Imagens\icone_despesas.png
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Release\net8.0-windows\Apresentacao\Imagens\icone_receitas.png

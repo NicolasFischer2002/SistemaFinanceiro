@@ -3,13 +3,24 @@ namespace SistemaFinanceiro
     public partial class FormInicial : Form
     {
         private Button[] BotoesMenuLateral;
+        private string[] CaminhosIconesBotoes;
         private Form? FormularioAtivo = null;
 
         public FormInicial()
         {
             InitializeComponent();
 
-            BotoesMenuLateral = [BtnDashboard, BtnDespesas, BtnReceitas];
+            BotoesMenuLateral = [
+                BtnDashboard, 
+                BtnDespesas, 
+                BtnReceitas
+            ];
+
+            CaminhosIconesBotoes = [
+                "Apresentacao/Imagens/icone_dashboard.png",
+                "Apresentacao/Imagens/icone_despesas.png",
+                "Apresentacao/Imagens/icone_receitas.png"
+            ];
 
             InicializarGUIFormInicial();
             InicializarGUIMenuLateral();
@@ -42,7 +53,7 @@ namespace SistemaFinanceiro
             InicializarLinhaSeparacao(PnlLinhaLogo);
             InicializarLinhaSeparacao(PnlLinhaRodape);
 
-            InicializarBtnMenuLateral(BtnDashboard, BtnDespesas, BtnReceitas);
+            InicializarBtnMenuLateral();
         }
 
         private void InicializarSessaoLogo()
@@ -61,30 +72,37 @@ namespace SistemaFinanceiro
             panel.BackColor = ColorTranslator.FromHtml("#45494E");
         }
 
-        private void InicializarBtnMenuLateral(params Button[] buttons)
+        private void InicializarBtnMenuLateral()
         {
-            foreach (var button in buttons)
+            // Certifique-se de que o tamanho dos dois arrays bate
+            if (BotoesMenuLateral.Length != CaminhosIconesBotoes.Length)
+                throw new InvalidOperationException("Botões e caminhos de ícone devem ter o mesmo tamanho.");
+
+            for (int i = 0; i < BotoesMenuLateral.Length; i++)
             {
-                // Garante que o botão herde o BackColor do seu pai
+                var button = BotoesMenuLateral[i];
+                var relPath = CaminhosIconesBotoes[i];
+
+                // Estilo padrão
                 button.Parent = PnlMenuLateral;
                 button.UseVisualStyleBackColor = false;
                 button.BackColor = Color.Transparent;
-
-                // Usa o estilo Flat para remover as bordas e fundo padrão
                 button.FlatStyle = FlatStyle.Flat;
                 button.FlatAppearance.BorderSize = 0;
                 button.FlatAppearance.MouseOverBackColor = Color.Transparent;
                 button.FlatAppearance.MouseDownBackColor = Color.Transparent;
-
-                // Fonte e cor
                 button.Font = new Font("Segoe UI", 11F, FontStyle.Regular);
                 button.ForeColor = Color.White;
-
                 button.TextAlign = ContentAlignment.MiddleLeft;
-                // Padding interno para não ficar encostado na borda
-                button.Padding = new Padding(10, 0, 0, 0);
-
+                button.Padding = new Padding(36, 0, 0, 0); // espaço para o ícone
                 button.Cursor = Cursors.Hand;
+
+                // Carregando o ícone
+                var fullPath = Path.Combine(Application.StartupPath, relPath);
+                
+                button.Image = Image.FromFile(fullPath);
+                button.ImageAlign = ContentAlignment.MiddleLeft;
+                button.TextImageRelation = TextImageRelation.ImageBeforeText;
             }
         }
 

@@ -79,6 +79,7 @@
             // 
             // BtnDashboard
             // 
+            BtnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
             BtnDashboard.Location = new Point(10, 119);
             BtnDashboard.Name = "BtnDashboard";
             BtnDashboard.Size = new Size(330, 45);
