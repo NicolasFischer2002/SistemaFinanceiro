@@ -38,10 +38,5 @@ namespace SistemaFinanceiro.Entidades
                 if (descricao.Length > tamanhoMaximoDescricao)
                     throw new ArgumentException($"O tamanho máximo para uma descrição é de {tamanhoMaximoDescricao}.");
         }
-
-        public abstract Task Cadastrar();
-        public abstract Task ObterPorId();
-        public abstract Task Atualizar();
-        public abstract Task Deletar();
     }
 }

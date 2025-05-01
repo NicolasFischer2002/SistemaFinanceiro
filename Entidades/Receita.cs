@@ -1,6 +1,8 @@
-﻿namespace SistemaFinanceiro.Entidades
+﻿using SistemaFinanceiro.Contratos;
+
+namespace SistemaFinanceiro.Entidades
 {
-    internal class Receita : Transacao
+    internal class Receita : Transacao, IRepositorio
     {
         public CategoriaReceita CategoriaReceita { get; private set; }
         public DateTime DataRecebimento { get; private set; }
@@ -15,22 +17,22 @@
             TipoPagamento = tipoPagamento;
         }
 
-        public override Task Atualizar()
+        public Task CadastrarAsync()
         {
             throw new NotImplementedException();
         }
 
-        public override Task Cadastrar()
+        public Task ObterPorIdAsync(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public override Task Deletar()
+        public Task AtualizarAsync()
         {
             throw new NotImplementedException();
         }
 
-        public override Task ObterPorId()
+        public Task DeletarAsync(Guid id)
         {
             throw new NotImplementedException();
         }
