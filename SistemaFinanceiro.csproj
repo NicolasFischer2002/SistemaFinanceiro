@@ -30,6 +30,12 @@
     <None Update="Apresentacao\Imagens\icone_despesas.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Apresentacao\Imagens\icone_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Apresentacao\Imagens\icone_power.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Apresentacao\Imagens\icone_receitas.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

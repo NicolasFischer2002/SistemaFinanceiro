@@ -22,3 +22,5 @@ C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\Siste
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_despesas.png
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_receitas.png
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Properties.Resources.resources
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_logo.png
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_power.png

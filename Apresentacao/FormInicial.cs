@@ -1,3 +1,5 @@
+using SistemaFinanceiro.Apresentacao.Helpers;
+
 namespace SistemaFinanceiro
 {
     public partial class FormInicial : Form
@@ -11,8 +13,8 @@ namespace SistemaFinanceiro
             InitializeComponent();
 
             BotoesMenuLateral = [
-                BtnDashboard, 
-                BtnDespesas, 
+                BtnDashboard,
+                BtnDespesas,
                 BtnReceitas
             ];
 
@@ -24,6 +26,7 @@ namespace SistemaFinanceiro
 
             InicializarGUIFormInicial();
             InicializarGUIMenuLateral();
+            InicializarRodape();
         }
 
         private void FormInicial_Load(object sender, EventArgs e)
@@ -58,6 +61,12 @@ namespace SistemaFinanceiro
 
         private void InicializarSessaoLogo()
         {
+            InicializarLabelNomeSistema();
+            InicializarLogo();
+        }
+
+        private void InicializarLabelNomeSistema()
+        {
             LblTitulo.Text = "Sistema Financeiro";
             LblTitulo.AutoSize = true;
 
@@ -65,6 +74,12 @@ namespace SistemaFinanceiro
             LblTitulo.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
 
             LblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+        }
+
+        private void InicializarLogo()
+        {
+            pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxLogo.Image = Image.FromFile("Apresentacao/Imagens/icone_logo.png");
         }
 
         private void InicializarLinhaSeparacao(Panel panel)
@@ -99,7 +114,7 @@ namespace SistemaFinanceiro
 
                 // Carregando o ícone
                 var fullPath = Path.Combine(Application.StartupPath, relPath);
-                
+
                 button.Image = Image.FromFile(fullPath);
                 button.ImageAlign = ContentAlignment.MiddleLeft;
                 button.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -165,6 +180,28 @@ namespace SistemaFinanceiro
                     ? corDestaque
                     : Color.Transparent;
             }
+        }
+
+        private void InicializarRodape()
+        {
+            pictureBoxPower.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxPower.Image = Image.FromFile("Apresentacao/Imagens/icone_power.png");
+
+            pictureBoxPower.Cursor = Cursors.Hand;
+            ToolTipService.Set(pictureBoxPower, "Sair do Sistema");
+        }
+
+        private void pictureBoxPower_Click(object sender, EventArgs e)
+        {
+            var resp = MessageBox.Show(
+                "Deseja realmente sair do sistema?",
+                "Confirmação",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (resp == DialogResult.Yes)
+                Application.Exit();
         }
     }
 }

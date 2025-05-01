@@ -35,11 +35,18 @@
             PnlLinhaRodape = new Panel();
             PnlLinhaLogo = new Panel();
             PnlRodapeMenuLateral = new Panel();
+            pictureBoxPower = new PictureBox();
             PnlLogoMenuLateral = new Panel();
+            panel1 = new Panel();
+            pictureBoxLogo = new PictureBox();
             LblTitulo = new Label();
             PnlTelaDinamica = new Panel();
             PnlMenuLateral.SuspendLayout();
+            PnlRodapeMenuLateral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPower).BeginInit();
             PnlLogoMenuLateral.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
             SuspendLayout();
             // 
             // PnlMenuLateral
@@ -99,32 +106,60 @@
             // PnlLinhaLogo
             // 
             PnlLinhaLogo.Dock = DockStyle.Top;
-            PnlLinhaLogo.Location = new Point(0, 100);
+            PnlLinhaLogo.Location = new Point(0, 90);
             PnlLinhaLogo.Name = "PnlLinhaLogo";
             PnlLinhaLogo.Size = new Size(350, 2);
             PnlLinhaLogo.TabIndex = 2;
             // 
             // PnlRodapeMenuLateral
             // 
+            PnlRodapeMenuLateral.Controls.Add(pictureBoxPower);
             PnlRodapeMenuLateral.Dock = DockStyle.Bottom;
             PnlRodapeMenuLateral.Location = new Point(0, 624);
             PnlRodapeMenuLateral.Name = "PnlRodapeMenuLateral";
             PnlRodapeMenuLateral.Size = new Size(350, 100);
             PnlRodapeMenuLateral.TabIndex = 1;
             // 
+            // pictureBoxPower
+            // 
+            pictureBoxPower.Location = new Point(19, 25);
+            pictureBoxPower.Name = "pictureBoxPower";
+            pictureBoxPower.Size = new Size(50, 50);
+            pictureBoxPower.TabIndex = 0;
+            pictureBoxPower.TabStop = false;
+            pictureBoxPower.Click += pictureBoxPower_Click;
+            // 
             // PnlLogoMenuLateral
             // 
+            PnlLogoMenuLateral.Controls.Add(panel1);
             PnlLogoMenuLateral.Controls.Add(LblTitulo);
             PnlLogoMenuLateral.Dock = DockStyle.Top;
             PnlLogoMenuLateral.Location = new Point(0, 0);
             PnlLogoMenuLateral.Name = "PnlLogoMenuLateral";
-            PnlLogoMenuLateral.Size = new Size(350, 100);
+            PnlLogoMenuLateral.Size = new Size(350, 90);
             PnlLogoMenuLateral.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(pictureBoxLogo);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(108, 90);
+            panel1.TabIndex = 2;
+            // 
+            // pictureBoxLogo
+            // 
+            pictureBoxLogo.Location = new Point(19, 11);
+            pictureBoxLogo.Name = "pictureBoxLogo";
+            pictureBoxLogo.Size = new Size(70, 70);
+            pictureBoxLogo.TabIndex = 1;
+            pictureBoxLogo.TabStop = false;
             // 
             // LblTitulo
             // 
             LblTitulo.AutoSize = true;
-            LblTitulo.Location = new Point(135, 46);
+            LblTitulo.Location = new Point(133, 34);
             LblTitulo.Name = "LblTitulo";
             LblTitulo.Size = new Size(106, 15);
             LblTitulo.TabIndex = 0;
@@ -150,8 +185,12 @@
             Text = "Form1";
             Load += FormInicial_Load;
             PnlMenuLateral.ResumeLayout(false);
+            PnlRodapeMenuLateral.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPower).EndInit();
             PnlLogoMenuLateral.ResumeLayout(false);
             PnlLogoMenuLateral.PerformLayout();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             ResumeLayout(false);
         }
 
@@ -166,5 +205,8 @@
         private Button BtnDespesas;
         private Label LblTitulo;
         private Panel PnlTelaDinamica;
+        private PictureBox pictureBoxLogo;
+        private Panel panel1;
+        private PictureBox pictureBoxPower;
     }
 }
