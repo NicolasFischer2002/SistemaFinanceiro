@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            TxtBoxQtdeParcelas = new TextBox();
             label1 = new Label();
             button1 = new Button();
             label7 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
+            dateTimePicker = new DateTimePicker();
+            CbBoxCategoria = new ComboBox();
+            CbBoxTipo = new ComboBox();
             comboBox1 = new ComboBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            textBox2 = new TextBox();
+            TxtBoxValor = new TextBox();
             label3 = new Label();
             TxtBoxDescricao = new TextBox();
             label2 = new Label();
@@ -49,17 +50,18 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ScrollBar;
+            panel1.Controls.Add(TxtBoxQtdeParcelas);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label7);
-            panel1.Controls.Add(dateTimePicker1);
-            panel1.Controls.Add(comboBox3);
-            panel1.Controls.Add(comboBox2);
+            panel1.Controls.Add(dateTimePicker);
+            panel1.Controls.Add(CbBoxCategoria);
+            panel1.Controls.Add(CbBoxTipo);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(TxtBoxValor);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(TxtBoxDescricao);
             panel1.Controls.Add(label2);
@@ -68,6 +70,13 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(643, 603);
             panel1.TabIndex = 2;
+            // 
+            // TxtBoxQtdeParcelas
+            // 
+            TxtBoxQtdeParcelas.Location = new Point(382, 156);
+            TxtBoxQtdeParcelas.Name = "TxtBoxQtdeParcelas";
+            TxtBoxQtdeParcelas.Size = new Size(45, 36);
+            TxtBoxQtdeParcelas.TabIndex = 17;
             // 
             // label1
             // 
@@ -87,7 +96,7 @@
             button1.TabIndex = 15;
             button1.Text = "INSERIR";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += this.button1_Click;
             // 
             // label7
             // 
@@ -99,31 +108,31 @@
             label7.TabIndex = 14;
             label7.Text = "Data";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            dateTimePicker1.Font = new Font("Segoe UI", 14F);
-            dateTimePicker1.Location = new Point(181, 472);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(320, 32);
-            dateTimePicker1.TabIndex = 13;
+            dateTimePicker.Font = new Font("Segoe UI", 14F);
+            dateTimePicker.Location = new Point(181, 472);
+            dateTimePicker.Name = "dateTimePicker";
+            dateTimePicker.Size = new Size(320, 32);
+            dateTimePicker.TabIndex = 13;
             // 
-            // comboBox3
+            // CbBoxCategoria
             // 
-            comboBox3.Font = new Font("Segoe UI", 16F);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(237, 398);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(190, 38);
-            comboBox3.TabIndex = 12;
+            CbBoxCategoria.Font = new Font("Segoe UI", 16F);
+            CbBoxCategoria.FormattingEnabled = true;
+            CbBoxCategoria.Location = new Point(237, 398);
+            CbBoxCategoria.Name = "CbBoxCategoria";
+            CbBoxCategoria.Size = new Size(190, 38);
+            CbBoxCategoria.TabIndex = 12;
             // 
-            // comboBox2
+            // CbBoxTipo
             // 
-            comboBox2.Font = new Font("Segoe UI", 16F);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(237, 320);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(190, 38);
-            comboBox2.TabIndex = 11;
+            CbBoxTipo.Font = new Font("Segoe UI", 16F);
+            CbBoxTipo.FormattingEnabled = true;
+            CbBoxTipo.Location = new Point(237, 320);
+            CbBoxTipo.Name = "CbBoxTipo";
+            CbBoxTipo.Size = new Size(190, 38);
+            CbBoxTipo.TabIndex = 11;
             // 
             // comboBox1
             // 
@@ -164,13 +173,13 @@
             label4.TabIndex = 4;
             label4.Text = "Status";
             // 
-            // textBox2
+            // TxtBoxValor
             // 
-            textBox2.Font = new Font("Segoe UI", 16F);
-            textBox2.Location = new Point(237, 156);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(190, 36);
-            textBox2.TabIndex = 3;
+            TxtBoxValor.Font = new Font("Segoe UI", 16F);
+            TxtBoxValor.Location = new Point(237, 156);
+            TxtBoxValor.Name = "TxtBoxValor";
+            TxtBoxValor.Size = new Size(139, 36);
+            TxtBoxValor.TabIndex = 3;
             // 
             // label3
             // 
@@ -217,18 +226,19 @@
         #endregion
         private Panel panel1;
         private Label label7;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
+        private DateTimePicker dateTimePicker;
+        private ComboBox CbBoxCategoria;
+        private ComboBox CbBoxTipo;
         private ComboBox comboBox1;
         private Label label6;
         private Label label5;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox TxtBoxValor;
         private Label label3;
         private TextBox TxtBoxDescricao;
         private Label label2;
         private Button button1;
         private Label label1;
+        private TextBox TxtBoxQtdeParcelas;
     }
 }

@@ -1,4 +1,8 @@
-﻿using SistemaFinanceiro.Contratos;
+﻿using System.Text.Json;
+using System.IO;
+using SistemaFinanceiro.Contratos;
+using System.Threading.Tasks;
+
 
 namespace SistemaFinanceiro.Entidades
 {
@@ -15,11 +19,39 @@ namespace SistemaFinanceiro.Entidades
             CategoriaReceita = categoriaReceita;
             DataRecebimento = dataRecebimento;
             TipoPagamento = tipoPagamento;
-        }
+        }        
+        
+              
 
-        public Task CadastrarAsync()
+        public async Task CadastrarAsync()
         {
+            string CaminhoExe = AppDomain.CurrentDomain.BaseDirectory;
+            string CaminhoArquivoReceitasJSON = Path.Combine(CaminhoExe, "receitas.json");
+
             throw new NotImplementedException();
+
+            List<Receita> lista;
+
+            // Ler e desserializar
+            if (File.Exists(CaminhoArquivoReceitasJSON))
+            {
+                var ArquivoJSON = await File.ReadAllTextAsync(CaminhoArquivoReceitasJSON);
+                lista = JsonSerializer.Deserialize<List<Receita>>(ArquivoJSON)
+                    ?? new List<Receita>();
+            }
+            else
+            {
+                lista = new List<Receita>();
+            }
+
+            // Adicionando nova receita
+            lista.Add(this);
+
+            // Serializa com identação e salva
+            var opcoes = new JsonSerializerOptions { WriteIndented = true };
+            var ArquivoJSONAtualizado = JsonSerializer.Serialize(lista, opcoes);
+
+            await File.WriteAllTextAsync(CaminhoArquivoReceitasJSON, ArquivoJSONAtualizado);
         }
 
         public Task ObterPorIdAsync(Guid id)
