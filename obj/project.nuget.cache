@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rnZ8uwz5VfY=",
+  "dgSpecHash": "Bb0anXgWtJo=",
   "success": true,
   "projectFilePath": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\SistemaFinanceiro.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Nicolas Fischer\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
+  ],
   "logs": []
 }
