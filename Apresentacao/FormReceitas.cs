@@ -17,16 +17,24 @@ namespace SistemaFinanceiro
         {
             try
             {
-                Receita receita = new Receita(
-                statusTransacao: StatusTransacao.Quitado,
-                descricao: TxtBoxDescricao.Text,
-                valor: Convert.ToDecimal(TxtBoxValor.Text),
-                quantidadeParcelas: Convert.ToInt32(TxtBoxQtdeParcelas.Text),
-                categoriaReceita: (CategoriaReceita)CbBoxCategoria.SelectedItem,
-                dataRecebimento: dateTimePicker.Value,
-                tipoPagamento: (TipoPagamento)CbBoxTipo.SelectedItem
-                );
+                // recupera cada enum diretamente de SelectedValue
+                var status = (StatusTransacao)CbBoxStatus.SelectedValue!;
+                var categoria = (CategoriaReceita)CbBoxCategoria.SelectedValue!;
+                var tipoPago = (TipoPagamento)CbBoxTipo.SelectedValue!;
 
+                var ValorTransacao = Convert.ToDecimal(TxtBoxValor.Text);// TIBET 
+
+
+                // monta a receita
+                Receita receita = new Receita(
+                    statusTransacao: status,
+                    valor: ValorTransacao,
+                    descricao: TxtBoxDescricao.Text,
+                    quantidadeParcelas: Convert.ToInt32(TxtBoxQtdeParcelas.Text),
+                    categoriaReceita: categoria,
+                    dataRecebimento: dateTimePicker.Value,
+                    tipoPagamento: tipoPago
+                );
                 await Task.Run(() => receita.CadastrarAsync());
                 MessageBox.Show("Receita cadastrada!");
             }
@@ -36,6 +44,7 @@ namespace SistemaFinanceiro
             }
         }
 
+
         private void FormReceitas_Shown(object sender, EventArgs e)
         {
 
@@ -43,26 +52,34 @@ namespace SistemaFinanceiro
 
         private void FormReceitas_Load(object sender, EventArgs e)
         {
-            // Preenchimento dos combobox
-            var ListaStatus = EnumHelper.GetAllDescriptions<StatusTransacao>();
+            // StatusTransacao
+            var listaStatus = EnumHelper
+            .GetAllValuesAndDescriptions<StatusTransacao>()
+            .Select(t => new { Value = t.Item1, Description = t.Item2 })
+            .ToList();
 
             CbBoxStatus.DisplayMember = "Description";
-            CbBoxStatus.ValueMember   = "Value";
-            CbBoxStatus.DataSource = ListaStatus.ToList();
+            CbBoxStatus.ValueMember = "Value";
+            CbBoxStatus.DataSource = listaStatus;
 
-
-            var ListaTipoPagamento = EnumHelper.GetAllDescriptions<TipoPagamento>();
-
+            // TipoPagamento           
+            var listaTipoPagamento = EnumHelper
+            .GetAllValuesAndDescriptions<TipoPagamento>()
+            .Select(t => new { Value = t.Item1, Description = t.Item2 })
+            .ToList();
             CbBoxTipo.DisplayMember = "Description";
             CbBoxTipo.ValueMember = "Value";
-            CbBoxTipo.DataSource = ListaTipoPagamento.ToList();
+            CbBoxTipo.DataSource = listaTipoPagamento;
 
-            
-            var ListaCategoria = EnumHelper.GetAllDescriptions<CategoriaReceita>();
-
+            // CategoriaReceita
+            var listaCategoria = EnumHelper
+            .GetAllValuesAndDescriptions<CategoriaReceita>()
+            .Select(t => new { Value = t.Item1, Description = t.Item2 })
+            .ToList();
             CbBoxCategoria.DisplayMember = "Description";
             CbBoxCategoria.ValueMember = "Value";
-            CbBoxCategoria.DataSource = ListaCategoria.ToList();
+            CbBoxCategoria.DataSource = listaCategoria;
         }
+
     }
 }

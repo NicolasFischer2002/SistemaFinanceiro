@@ -32,7 +32,7 @@
             label8 = new Label();
             TxtBoxQtdeParcelas = new TextBox();
             label1 = new Label();
-            button1 = new Button();
+            BtnReceita = new Button();
             label7 = new Label();
             dateTimePicker = new DateTimePicker();
             CbBoxCategoria = new ComboBox();
@@ -54,7 +54,7 @@
             panel1.Controls.Add(label8);
             panel1.Controls.Add(TxtBoxQtdeParcelas);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(BtnReceita);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(dateTimePicker);
             panel1.Controls.Add(CbBoxCategoria);
@@ -68,7 +68,7 @@
             panel1.Controls.Add(TxtBoxDescricao);
             panel1.Controls.Add(label2);
             panel1.Font = new Font("Segoe UI", 16F);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(142, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(608, 661);
             panel1.TabIndex = 2;
@@ -100,15 +100,15 @@
             label1.TabIndex = 16;
             label1.Text = "RECEITAS";
             // 
-            // button1
+            // BtnReceita
             // 
-            button1.Location = new Point(133, 584);
-            button1.Name = "button1";
-            button1.Size = new Size(327, 66);
-            button1.TabIndex = 8;
-            button1.Text = "INSERIR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            BtnReceita.Location = new Point(133, 584);
+            BtnReceita.Name = "BtnReceita";
+            BtnReceita.Size = new Size(327, 66);
+            BtnReceita.TabIndex = 8;
+            BtnReceita.Text = "INSERIR";
+            BtnReceita.UseVisualStyleBackColor = true;
+            BtnReceita.Click += button1_Click;
             // 
             // label7
             // 
@@ -252,7 +252,7 @@
         private Label label3;
         private TextBox TxtBoxDescricao;
         private Label label2;
-        private Button button1;
+        private Button BtnReceita;
         private Label label1;
         private TextBox TxtBoxQtdeParcelas;
         private Label label8;
