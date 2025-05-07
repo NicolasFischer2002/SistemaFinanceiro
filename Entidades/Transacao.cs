@@ -26,7 +26,7 @@ namespace SistemaFinanceiro.Entidades
         {
             const int valorMinimo = 0;
 
-            if (Valor <= valorMinimo)
+            if (valor <= valorMinimo)
                 throw new ArgumentException($"O valor da transação deve ser superior a {valorMinimo}.");
         }
 

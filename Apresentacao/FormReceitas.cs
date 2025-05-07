@@ -22,20 +22,21 @@ namespace SistemaFinanceiro
                 var categoria = (CategoriaReceita)CbBoxCategoria.SelectedValue!;
                 var tipoPago = (TipoPagamento)CbBoxTipo.SelectedValue!;
 
-                var ValorTransacao = Convert.ToDecimal(TxtBoxValor.Text);// TIBET 
-
 
                 // monta a receita
                 Receita receita = new Receita(
                     statusTransacao: status,
-                    valor: ValorTransacao,
+                    valor: Convert.ToDecimal(TxtBoxValor.Text),
                     descricao: TxtBoxDescricao.Text,
-                    quantidadeParcelas: Convert.ToInt32(TxtBoxQtdeParcelas.Text),
+                    quantidadeParcelas: Convert.ToInt32(NumeroParcelas.Text),
                     categoriaReceita: categoria,
                     dataRecebimento: dateTimePicker.Value,
                     tipoPagamento: tipoPago
                 );
-                await Task.Run(() => receita.CadastrarAsync());
+
+
+                await receita.CadastrarAsync();
+
                 MessageBox.Show("Receita cadastrada!");
             }
             catch (Exception ex)
@@ -81,5 +82,9 @@ namespace SistemaFinanceiro
             CbBoxCategoria.DataSource = listaCategoria;
         }
 
+        private void NumeroParcelas_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

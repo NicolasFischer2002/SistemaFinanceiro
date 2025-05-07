@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            NumeroParcelas = new NumericUpDown();
             label8 = new Label();
-            TxtBoxQtdeParcelas = new TextBox();
             label1 = new Label();
             BtnReceita = new Button();
             label7 = new Label();
@@ -46,13 +46,14 @@
             TxtBoxDescricao = new TextBox();
             label2 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)NumeroParcelas).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ScrollBar;
+            panel1.Controls.Add(NumeroParcelas);
             panel1.Controls.Add(label8);
-            panel1.Controls.Add(TxtBoxQtdeParcelas);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(BtnReceita);
             panel1.Controls.Add(label7);
@@ -73,6 +74,14 @@
             panel1.Size = new Size(608, 661);
             panel1.TabIndex = 2;
             // 
+            // NumeroParcelas
+            // 
+            NumeroParcelas.Location = new Point(361, 82);
+            NumeroParcelas.Name = "NumeroParcelas";
+            NumeroParcelas.Size = new Size(99, 36);
+            NumeroParcelas.TabIndex = 19;
+            NumeroParcelas.ValueChanged += NumeroParcelas_ValueChanged;
+            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -82,13 +91,6 @@
             label8.Size = new Size(121, 30);
             label8.TabIndex = 18;
             label8.Text = "Nº Parcelas";
-            // 
-            // TxtBoxQtdeParcelas
-            // 
-            TxtBoxQtdeParcelas.Location = new Point(361, 82);
-            TxtBoxQtdeParcelas.Name = "TxtBoxQtdeParcelas";
-            TxtBoxQtdeParcelas.Size = new Size(99, 36);
-            TxtBoxQtdeParcelas.TabIndex = 2;
             // 
             // label1
             // 
@@ -235,6 +237,7 @@
             Shown += FormReceitas_Shown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)NumeroParcelas).EndInit();
             ResumeLayout(false);
         }
 
@@ -254,7 +257,7 @@
         private Label label2;
         private Button BtnReceita;
         private Label label1;
-        private TextBox TxtBoxQtdeParcelas;
         private Label label8;
+        private NumericUpDown NumeroParcelas;
     }
 }
