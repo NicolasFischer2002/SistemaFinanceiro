@@ -1,0 +1,17 @@
+[
+  {
+    "CategoriaReceita": 0,
+    "DataRecebimento": "2025-05-06T10:20:13.2883573-03:00",
+    "TipoPagamento": 0,
+    "Id": "00000000-0000-0000-0000-000000000000",
+    "StatusTransacao": 0,
+    "Valor": 1,
+    "Parcelas": [
+      {
+        "Numero": 1,
+        "Valor": 1
+      }
+    ],
+    "Descricao": "dewdw"
+  }
+]

@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\guss\\documents\\facul\\poo\\sistemafinanceiro\\entidades\\receita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:entidades\\receita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\guss\\documents\\facul\\poo\\sistemafinanceiro\\apresentacao\\formreceitas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formreceitas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\guss\\documents\\facul\\poo\\sistemafinanceiro\\apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\guss\\documents\\facul\\poo\\sistemafinanceiro\\apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\guss\\documents\\facul\\poo\\sistemafinanceiro\\entidades\\receita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:entidades\\receita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormReceitas.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.cs",
-              "RelativeDocumentMoniker": "Apresentacao\\FormReceitas.cs",
-              "ToolTip": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.cs [Design]",
-              "RelativeToolTip": "Apresentacao\\FormReceitas.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T01:13:22.31Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormReceitas.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.Designer.cs",
-              "RelativeDocumentMoniker": "Apresentacao\\FormReceitas.Designer.cs",
-              "ToolTip": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.Designer.cs",
-              "RelativeToolTip": "Apresentacao\\FormReceitas.Designer.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAMwFoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T01:12:15.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormReceitas.cs",
-              "DocumentMoniker": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.cs",
-              "RelativeDocumentMoniker": "Apresentacao\\FormReceitas.cs",
-              "ToolTip": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.cs",
-              "RelativeToolTip": "Apresentacao\\FormReceitas.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T00:19:54.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Receita.cs",
               "DocumentMoniker": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Entidades\\Receita.cs",
               "RelativeDocumentMoniker": "Entidades\\Receita.cs",
               "ToolTip": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Entidades\\Receita.cs",
               "RelativeToolTip": "Entidades\\Receita.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAcwGYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T20:26:39.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormReceitas.cs",
+              "DocumentMoniker": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FormReceitas.cs",
+              "ToolTip": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.cs",
+              "RelativeToolTip": "Apresentacao\\FormReceitas.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAD4vxgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T19:09:49.934Z",
               "EditorCaption": ""
             }
           ]
