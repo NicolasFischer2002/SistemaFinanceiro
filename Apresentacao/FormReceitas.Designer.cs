@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label8 = new Label();
+            NumeroParcelas = new TextBox();
             label1 = new Label();
             button1 = new Button();
             label7 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
+            dateTimePicker = new DateTimePicker();
+            CbBoxCategoria = new ComboBox();
+            CbBoxTipo = new ComboBox();
+            CbBoxStatus = new ComboBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            textBox2 = new TextBox();
+            TxtBoxValor = new TextBox();
             label3 = new Label();
             TxtBoxDescricao = new TextBox();
             label2 = new Label();
@@ -49,25 +51,45 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ScrollBar;
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(NumeroParcelas);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label7);
-            panel1.Controls.Add(dateTimePicker1);
-            panel1.Controls.Add(comboBox3);
-            panel1.Controls.Add(comboBox2);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(dateTimePicker);
+            panel1.Controls.Add(CbBoxCategoria);
+            panel1.Controls.Add(CbBoxTipo);
+            panel1.Controls.Add(CbBoxStatus);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(TxtBoxValor);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(TxtBoxDescricao);
             panel1.Controls.Add(label2);
             panel1.Font = new Font("Segoe UI", 16F);
-            panel1.Location = new Point(12, 45);
+            panel1.Location = new Point(388, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(643, 603);
+            panel1.Size = new Size(643, 661);
             panel1.TabIndex = 2;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 16F);
+            label8.Location = new Point(237, 194);
+            label8.Name = "label8";
+            label8.Size = new Size(90, 30);
+            label8.TabIndex = 18;
+            label8.Text = "Parcelas";
+            // 
+            // NumeroParcelas
+            // 
+            NumeroParcelas.Font = new Font("Segoe UI", 16F);
+            NumeroParcelas.Location = new Point(237, 227);
+            NumeroParcelas.Name = "NumeroParcelas";
+            NumeroParcelas.Size = new Size(190, 36);
+            NumeroParcelas.TabIndex = 17;
             // 
             // label1
             // 
@@ -81,7 +103,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(181, 528);
+            button1.Location = new Point(175, 599);
             button1.Name = "button1";
             button1.Size = new Size(320, 49);
             button1.TabIndex = 15;
@@ -93,52 +115,52 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 16F);
-            label7.Location = new Point(181, 439);
+            label7.Location = new Point(175, 501);
             label7.Name = "label7";
             label7.Size = new Size(57, 30);
             label7.TabIndex = 14;
             label7.Text = "Data";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            dateTimePicker1.Font = new Font("Segoe UI", 14F);
-            dateTimePicker1.Location = new Point(181, 472);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(320, 32);
-            dateTimePicker1.TabIndex = 13;
+            dateTimePicker.Font = new Font("Segoe UI", 14F);
+            dateTimePicker.Location = new Point(175, 543);
+            dateTimePicker.Name = "dateTimePicker";
+            dateTimePicker.Size = new Size(320, 32);
+            dateTimePicker.TabIndex = 13;
             // 
-            // comboBox3
+            // CbBoxCategoria
             // 
-            comboBox3.Font = new Font("Segoe UI", 16F);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(237, 398);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(190, 38);
-            comboBox3.TabIndex = 12;
+            CbBoxCategoria.Font = new Font("Segoe UI", 16F);
+            CbBoxCategoria.FormattingEnabled = true;
+            CbBoxCategoria.Location = new Point(237, 460);
+            CbBoxCategoria.Name = "CbBoxCategoria";
+            CbBoxCategoria.Size = new Size(190, 38);
+            CbBoxCategoria.TabIndex = 12;
             // 
-            // comboBox2
+            // CbBoxTipo
             // 
-            comboBox2.Font = new Font("Segoe UI", 16F);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(237, 320);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(190, 38);
-            comboBox2.TabIndex = 11;
+            CbBoxTipo.Font = new Font("Segoe UI", 16F);
+            CbBoxTipo.FormattingEnabled = true;
+            CbBoxTipo.Location = new Point(237, 382);
+            CbBoxTipo.Name = "CbBoxTipo";
+            CbBoxTipo.Size = new Size(190, 38);
+            CbBoxTipo.TabIndex = 11;
             // 
-            // comboBox1
+            // CbBoxStatus
             // 
-            comboBox1.Font = new Font("Segoe UI", 16F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(234, 237);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(193, 38);
-            comboBox1.TabIndex = 10;
+            CbBoxStatus.Font = new Font("Segoe UI", 16F);
+            CbBoxStatus.FormattingEnabled = true;
+            CbBoxStatus.Location = new Point(237, 305);
+            CbBoxStatus.Name = "CbBoxStatus";
+            CbBoxStatus.Size = new Size(193, 38);
+            CbBoxStatus.TabIndex = 10;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 16F);
-            label6.Location = new Point(237, 365);
+            label6.Location = new Point(237, 427);
             label6.Name = "label6";
             label6.Size = new Size(107, 30);
             label6.TabIndex = 8;
@@ -148,7 +170,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16F);
-            label5.Location = new Point(237, 287);
+            label5.Location = new Point(237, 349);
             label5.Name = "label5";
             label5.Size = new Size(56, 30);
             label5.TabIndex = 6;
@@ -158,19 +180,19 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F);
-            label4.Location = new Point(237, 204);
+            label4.Location = new Point(237, 269);
             label4.Name = "label4";
             label4.Size = new Size(70, 30);
             label4.TabIndex = 4;
             label4.Text = "Status";
             // 
-            // textBox2
+            // TxtBoxValor
             // 
-            textBox2.Font = new Font("Segoe UI", 16F);
-            textBox2.Location = new Point(237, 156);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(190, 36);
-            textBox2.TabIndex = 3;
+            TxtBoxValor.Font = new Font("Segoe UI", 16F);
+            TxtBoxValor.Location = new Point(237, 156);
+            TxtBoxValor.Name = "TxtBoxValor";
+            TxtBoxValor.Size = new Size(190, 36);
+            TxtBoxValor.TabIndex = 3;
             // 
             // label3
             // 
@@ -209,6 +231,7 @@
             Controls.Add(panel1);
             Name = "FormReceitas";
             Text = "FormReceitas";
+            Load += FormReceitas_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -217,18 +240,20 @@
         #endregion
         private Panel panel1;
         private Label label7;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private DateTimePicker dateTimePicker;
+        private ComboBox CbBoxCategoria;
+        private ComboBox CbBoxTipo;
+        private ComboBox CbBoxStatus;
         private Label label6;
         private Label label5;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox TxtBoxValor;
         private Label label3;
         private TextBox TxtBoxDescricao;
         private Label label2;
         private Button button1;
         private Label label1;
+        private TextBox NumeroParcelas;
+        private Label label8;
     }
 }

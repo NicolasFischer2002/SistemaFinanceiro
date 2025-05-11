@@ -4,11 +4,11 @@ namespace SistemaFinanceiro.Entidades
 {
     internal abstract class Transacao
     {
-        public Guid Id { get; private set; }
-        public StatusTransacao StatusTransacao { get; private set; }
-        public decimal Valor { get; private set; }
-        public IReadOnlyList<Parcela> Parcelas { get; private set; }
-        public string? Descricao { get; private set; }
+        public Guid Id { get; init; }
+        public StatusTransacao StatusTransacao { get; init; }
+        public decimal Valor { get; init; }
+        public IReadOnlyList<Parcela> Parcelas { get; init; }
+        public string? Descricao { get; init; }
 
         public Transacao(StatusTransacao statusTransacao, decimal valor, int quantidadeParcelas, string? descricao)
         {
@@ -26,7 +26,7 @@ namespace SistemaFinanceiro.Entidades
         {
             const int valorMinimo = 0;
 
-            if (Valor <= valorMinimo)
+            if (valor <= valorMinimo)
                 throw new ArgumentException($"O valor da transação deve ser superior a {valorMinimo}.");
         }
 

@@ -2,7 +2,7 @@
 
 namespace SistemaFinanceiro.Entidades
 {
-    internal class Despesa : Transacao, IRepositorio
+    internal class Despesa : Transacao
     {
         public CategoriaDespesa CategoriaDespesa { get; private set; }
         public DateTime DataVencimento { get; private set; }
@@ -18,26 +18,6 @@ namespace SistemaFinanceiro.Entidades
             DataVencimento = dataVencimento;
             DataPagamento = dataPagamento;
             TipoPagamento = tipoPagamento;
-        }
-
-        public Task CadastrarAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task ObterPorIdAsync(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task AtualizarAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task DeletarAsync(Guid id)
-        {
-            throw new NotImplementedException();
         }
     }
 }

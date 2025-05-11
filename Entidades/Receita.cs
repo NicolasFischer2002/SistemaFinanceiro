@@ -2,11 +2,12 @@
 
 namespace SistemaFinanceiro.Entidades
 {
-    internal class Receita : Transacao, IRepositorio
+    internal class Receita : Transacao, IRepositorioReceitas
     {
-        public CategoriaReceita CategoriaReceita { get; private set; }
-        public DateTime DataRecebimento { get; private set; }
-        public TipoPagamento TipoPagamento { get; private set; }
+        public CategoriaReceita CategoriaReceita { get; init; }
+        public DateTime DataRecebimento { get; init; }
+        public TipoPagamento TipoPagamento { get; init; }
+        private const string CaminhoArquivoReceitas = "Arquivos/Receitas.txt";
 
         public Receita(StatusTransacao statusTransacao, decimal valor, string? descricao, int quantidadeParcelas,
             CategoriaReceita categoriaReceita, DateTime dataRecebimento, TipoPagamento tipoPagamento)
@@ -17,7 +18,7 @@ namespace SistemaFinanceiro.Entidades
             TipoPagamento = tipoPagamento;
         }
 
-        public Task CadastrarAsync()
+        public async Task CadastrarAsync()
         {
             throw new NotImplementedException();
         }
@@ -33,6 +34,11 @@ namespace SistemaFinanceiro.Entidades
         }
 
         public Task DeletarAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async ValueTask<List<Receita>> ObterTodas()
         {
             throw new NotImplementedException();
         }
