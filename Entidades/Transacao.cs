@@ -15,7 +15,7 @@ namespace SistemaFinanceiro.Entidades
             ValidarValor(valor);
             ValidarDescricao(descricao);
 
-            Id = new Guid();
+            Id = Guid.NewGuid();
             StatusTransacao = statusTransacao;
             Valor = valor;
             Parcelas = ParcelaGenerator.Gerar(valor, quantidadeParcelas);

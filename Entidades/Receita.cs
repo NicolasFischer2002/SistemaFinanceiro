@@ -1,4 +1,6 @@
 ﻿using SistemaFinanceiro.Contratos;
+using SistemaFinanceiro.DTOs;
+using System.Text.Json;
 
 namespace SistemaFinanceiro.Entidades
 {
@@ -7,7 +9,7 @@ namespace SistemaFinanceiro.Entidades
         public CategoriaReceita CategoriaReceita { get; init; }
         public DateTime DataRecebimento { get; init; }
         public TipoPagamento TipoPagamento { get; init; }
-        private const string CaminhoArquivoReceitas = "Arquivos/Receitas.txt";
+        private const string CaminhoArquivoReceitas = "Arquivos/Receitas.json";
 
         public Receita(StatusTransacao statusTransacao, decimal valor, string? descricao, int quantidadeParcelas,
             CategoriaReceita categoriaReceita, DateTime dataRecebimento, TipoPagamento tipoPagamento)
@@ -20,7 +22,9 @@ namespace SistemaFinanceiro.Entidades
 
         public async Task CadastrarAsync()
         {
-            throw new NotImplementedException();
+            var dto = ReceitaMapper.ToDto(this);
+            var linhaJson = JsonSerializer.Serialize(dto, new JsonSerializerOptions { WriteIndented = false });
+            await File.AppendAllTextAsync(CaminhoArquivoReceitas, linhaJson + Environment.NewLine);
         }
 
         public Task ObterPorIdAsync(Guid id)
@@ -38,9 +42,32 @@ namespace SistemaFinanceiro.Entidades
             throw new NotImplementedException();
         }
 
-        public async ValueTask<List<Receita>> ObterTodas()
+        public static async ValueTask<List<Receita>> ObterTodas()
         {
-            throw new NotImplementedException();
+            if (!File.Exists(CaminhoArquivoReceitas))
+                return new List<Receita>();
+
+            var receitas = new List<Receita>();
+            
+            foreach (var linha in await File.ReadAllLinesAsync(CaminhoArquivoReceitas))
+            {
+                if (string.IsNullOrWhiteSpace(linha)) continue;
+                var dto = JsonSerializer.Deserialize<ReceitaDTO>(linha)!;
+                receitas.Add(ReceitaMapper.ToDomain(dto));
+            }
+
+            return receitas;
         }
+
+        public static decimal ValorSalarios(List<Receita> receitas, Datas datas)
+        {
+            return receitas
+                .Where(r => r.CategoriaReceita == CategoriaReceita.Salario
+                    && r.DataRecebimento >= datas.DataInicial
+                    && r.DataRecebimento <= datas.DataFinal)
+                .Sum(r => r.Valor);
+        }
+
+
     }
 }

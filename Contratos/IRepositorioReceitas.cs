@@ -6,7 +6,6 @@ namespace SistemaFinanceiro.Contratos
     {
         Task CadastrarAsync();
         Task ObterPorIdAsync(Guid id);
-        ValueTask<List<Receita>> ObterTodas();
         Task AtualizarAsync();
         Task DeletarAsync(Guid id);
     }

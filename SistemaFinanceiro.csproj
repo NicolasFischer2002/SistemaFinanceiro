@@ -43,10 +43,10 @@
     <None Update="Apresentacao\Imagens\icone_receitas.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Arquivos\Despesas.txt">
+    <None Update="Arquivos\Despesas.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Arquivos\Receitas.txt">
+    <None Update="Arquivos\Receitas.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

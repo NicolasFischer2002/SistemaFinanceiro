@@ -115,6 +115,7 @@
             Controls.Add(label1);
             Name = "FormDashboard";
             Text = "Form1";
+            Load += FormDashboard_Load;
             ((System.ComponentModel.ISupportInitialize)graficoGeral).EndInit();
             pnlSessaoGeral.ResumeLayout(false);
             pnlSessaoGeralDireito.ResumeLayout(false);

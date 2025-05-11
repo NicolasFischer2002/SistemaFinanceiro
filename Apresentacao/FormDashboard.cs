@@ -1,5 +1,6 @@
 ﻿using SistemaFinanceiro.Apresentacao;
 using SistemaFinanceiro.Apresentacao.Helpers;
+using SistemaFinanceiro.Entidades;
 
 namespace SistemaFinanceiro
 {
@@ -11,7 +12,6 @@ namespace SistemaFinanceiro
             FormDinamicoConteudo.InicializarGUI(this);
 
             InicializarLabels();
-            InicializarGraficoGeral();
         }
 
         private void InicializarLabels()
@@ -19,17 +19,24 @@ namespace SistemaFinanceiro
             LabelService.InicializarTexto(lblSessaoGeralEsquerda);
         }
 
-        private void InicializarGraficoGeral()
+        private async Task InicializarGraficos()
         {
+            var receitas = await Receita.ObterTodas();
+
             var dados = new Dictionary<string, double>
             {
-                ["Salário"] = 2000,
+                ["Salário"] = (double)Receita.ValorSalarios(receitas, new Datas()),
                 ["Alimentação"] = 500,
                 ["Transporte"] = 200,
                 ["Lazer"] = 300
             };
 
             GraficoPizzaService.InicializarExistente(graficoGeral, dados);
+        }
+
+        private void FormDashboard_Load(object sender, EventArgs e)
+        {
+            InicializarGraficos();
         }
     }
 }

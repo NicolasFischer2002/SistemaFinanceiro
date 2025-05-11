@@ -1,6 +1,4 @@
-﻿using SistemaFinanceiro.Contratos;
-
-namespace SistemaFinanceiro.Entidades
+﻿namespace SistemaFinanceiro.Entidades
 {
     internal class Despesa : Transacao
     {

@@ -1,0 +1,2 @@
+{"Id":"c098461a-cb5f-4bae-afdb-00d9a7ea3d7a","StatusTransacao":"Quitado","Valor":100,"QuantidadeParcelas":1,"Descricao":"Primeira receita","CategoriaReceita":"Salario","DataRecebimento":"2025-05-11T10:47:56.2343874-03:00","TipoPagamento":"PIX"}
+{"Id":"cbacd631-6d9d-4447-bea0-c04e08662971","StatusTransacao":"Quitado","Valor":150,"QuantidadeParcelas":1,"Descricao":"Segunda receita","CategoriaReceita":"Salario","DataRecebimento":"2025-05-11T10:47:56.2343874-03:00","TipoPagamento":"PIX"}

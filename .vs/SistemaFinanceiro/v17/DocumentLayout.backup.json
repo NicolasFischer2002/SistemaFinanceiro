@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\helpers\\arquivotxthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:helpers\\arquivotxthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\entidades\\receita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:entidades\\receita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +21,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\apresentacao\\forminicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\forminicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-11T00:15:07.147Z",
               "IsPinned": true,
@@ -65,21 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Receita.cs",
-              "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Entidades\\Receita.cs",
-              "RelativeDocumentMoniker": "Entidades\\Receita.cs",
-              "ToolTip": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Entidades\\Receita.cs",
-              "RelativeToolTip": "Entidades\\Receita.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T00:03:33.108Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "FormReceitas.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FormReceitas.cs",
@@ -98,7 +88,7 @@
               "RelativeDocumentMoniker": "Apresentacao\\FormReceitas.cs",
               "ToolTip": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormReceitas.cs",
               "RelativeToolTip": "Apresentacao\\FormReceitas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-11T00:37:30.628Z",
               "IsPinned": true,
@@ -106,15 +96,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ArquivoTXTHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Helpers\\ArquivoTXTHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\ArquivoTXTHelper.cs",
-              "ToolTip": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Helpers\\ArquivoTXTHelper.cs",
-              "RelativeToolTip": "Helpers\\ArquivoTXTHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABYAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Receita.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Entidades\\Receita.cs",
+              "RelativeDocumentMoniker": "Entidades\\Receita.cs",
+              "ToolTip": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Entidades\\Receita.cs",
+              "RelativeToolTip": "Entidades\\Receita.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAuwEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T01:20:34.197Z",
+              "WhenOpened": "2025-05-11T00:03:33.108Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormDashboard.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormDashboard.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FormDashboard.cs",
+              "ToolTip": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormDashboard.cs [Projeto]",
+              "RelativeToolTip": "Apresentacao\\FormDashboard.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:19:36.462Z",
+              "IsPinned": true,
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormDashboard.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FormDashboard.cs",
+              "ToolTip": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormDashboard.cs",
+              "RelativeToolTip": "Apresentacao\\FormDashboard.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwBwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:20:08.118Z",
               "IsPinned": true,
               "EditorCaption": ""
             }
