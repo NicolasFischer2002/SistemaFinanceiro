@@ -36,15 +36,15 @@
             label7 = new Label();
             dateTimePicker = new DateTimePicker();
             CbBoxCategoria = new ComboBox();
-            CbBoxTipo = new ComboBox();
             CbBoxStatus = new ComboBox();
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
             TxtBoxValor = new TextBox();
             label3 = new Label();
             TxtBoxDescricao = new TextBox();
             label2 = new Label();
+            label5 = new Label();
+            CbBoxTipo = new ComboBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -138,15 +138,6 @@
             CbBoxCategoria.Size = new Size(190, 38);
             CbBoxCategoria.TabIndex = 12;
             // 
-            // CbBoxTipo
-            // 
-            CbBoxTipo.Font = new Font("Segoe UI", 16F);
-            CbBoxTipo.FormattingEnabled = true;
-            CbBoxTipo.Location = new Point(237, 382);
-            CbBoxTipo.Name = "CbBoxTipo";
-            CbBoxTipo.Size = new Size(190, 38);
-            CbBoxTipo.TabIndex = 11;
-            // 
             // CbBoxStatus
             // 
             CbBoxStatus.Font = new Font("Segoe UI", 16F);
@@ -165,16 +156,6 @@
             label6.Size = new Size(107, 30);
             label6.TabIndex = 8;
             label6.Text = "Categoria";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 16F);
-            label5.Location = new Point(237, 349);
-            label5.Name = "label5";
-            label5.Size = new Size(56, 30);
-            label5.TabIndex = 6;
-            label5.Text = "Tipo";
             // 
             // label4
             // 
@@ -222,6 +203,25 @@
             label2.TabIndex = 0;
             label2.Text = "Descrição";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16F);
+            label5.Location = new Point(237, 349);
+            label5.Name = "label5";
+            label5.Size = new Size(56, 30);
+            label5.TabIndex = 6;
+            label5.Text = "Tipo";
+            // 
+            // CbBoxTipo
+            // 
+            CbBoxTipo.Font = new Font("Segoe UI", 16F);
+            CbBoxTipo.FormattingEnabled = true;
+            CbBoxTipo.Location = new Point(237, 382);
+            CbBoxTipo.Name = "CbBoxTipo";
+            CbBoxTipo.Size = new Size(190, 38);
+            CbBoxTipo.TabIndex = 11;
+            // 
             // FormReceitas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -242,10 +242,8 @@
         private Label label7;
         private DateTimePicker dateTimePicker;
         private ComboBox CbBoxCategoria;
-        private ComboBox CbBoxTipo;
         private ComboBox CbBoxStatus;
         private Label label6;
-        private Label label5;
         private Label label4;
         private TextBox TxtBoxValor;
         private Label label3;
@@ -255,5 +253,7 @@
         private Label label1;
         private TextBox NumeroParcelas;
         private Label label8;
+        private ComboBox CbBoxTipo;
+        private Label label5;
     }
 }

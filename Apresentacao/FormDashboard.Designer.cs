@@ -31,16 +31,26 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             label1 = new Label();
             graficoGeral = new System.Windows.Forms.DataVisualization.Charting.Chart();
             pnlSessaoGeral = new Panel();
             pnlSessaoGeralDireito = new Panel();
             pnlSessaoGeralEsquerdo = new Panel();
             lblSessaoGeralEsquerda = new Label();
+            panel1 = new Panel();
+            graficoDespesas = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            panel2 = new Panel();
+            lblDespesas = new Label();
             ((System.ComponentModel.ISupportInitialize)graficoGeral).BeginInit();
             pnlSessaoGeral.SuspendLayout();
             pnlSessaoGeralDireito.SuspendLayout();
             pnlSessaoGeralEsquerdo.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)graficoDespesas).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -105,12 +115,57 @@
             lblSessaoGeralEsquerda.TabIndex = 0;
             lblSessaoGeralEsquerda.Text = "Receitas X Despesas";
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(graficoDespesas);
+            panel1.Controls.Add(panel2);
+            panel1.Location = new Point(1, 339);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1378, 251);
+            panel1.TabIndex = 5;
+            // 
+            // graficoDespesas
+            // 
+            chartArea2.Name = "ChartArea1";
+            graficoDespesas.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            graficoDespesas.Legends.Add(legend2);
+            graficoDespesas.Location = new Point(278, 14);
+            graficoDespesas.Name = "graficoDespesas";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            graficoDespesas.Series.Add(series2);
+            graficoDespesas.Size = new Size(288, 220);
+            graficoDespesas.TabIndex = 4;
+            graficoDespesas.Text = "chart1";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(lblDespesas);
+            panel2.Dock = DockStyle.Right;
+            panel2.Location = new Point(885, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(493, 251);
+            panel2.TabIndex = 0;
+            // 
+            // lblDespesas
+            // 
+            lblDespesas.AutoSize = true;
+            lblDespesas.Font = new Font("Segoe UI", 15F);
+            lblDespesas.Location = new Point(228, 116);
+            lblDespesas.Name = "lblDespesas";
+            lblDespesas.Size = new Size(92, 28);
+            lblDespesas.TabIndex = 1;
+            lblDespesas.Text = "Despesas";
+            // 
             // FormDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 192, 0);
             ClientSize = new Size(1379, 685);
+            Controls.Add(panel1);
             Controls.Add(pnlSessaoGeral);
             Controls.Add(label1);
             Name = "FormDashboard";
@@ -121,6 +176,10 @@
             pnlSessaoGeralDireito.ResumeLayout(false);
             pnlSessaoGeralEsquerdo.ResumeLayout(false);
             pnlSessaoGeralEsquerdo.PerformLayout();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)graficoDespesas).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -133,5 +192,9 @@
         private Panel pnlSessaoGeralEsquerdo;
         private Panel pnlSessaoGeralDireito;
         private Label lblSessaoGeralEsquerda;
+        private Panel panel1;
+        private Panel panel2;
+        private Label lblDespesas;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graficoDespesas;
     }
 }
