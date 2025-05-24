@@ -91,7 +91,7 @@ namespace SistemaFinanceiro
                 Despesa despesa = new Despesa(
                     statusTransacao: status,
                     valor: Convert.ToDecimal(TxtBoxValor.Text),
-                    quantidadeParcelas: Convert.ToInt32(TxtBoxNumeroParcelas.Text),
+                    quantidadeParcelas: Convert.ToInt32(NumeroParcelas.Text),
                     descricao: TxtBoxDescricao.Text,
                     categoriaDespesa: categoria,
                     dataVencimento: dateTimePickerVencimento.Value,
@@ -126,8 +126,7 @@ namespace SistemaFinanceiro
 
         private void LimparCampos()
         {
-            TxtBoxValor.Text = "";
-            TxtBoxNumeroParcelas.Text = "";
+            TxtBoxValor.Text = "";           
             CbBoxStatus.SelectedIndex = 0;
             CbBoxCategoria.SelectedIndex = 0;
             dateTimePickerPagamento.Value = DateTime.Now;
