@@ -140,7 +140,7 @@
             CbBoxTipo.FormattingEnabled = true;
             CbBoxTipo.Location = new Point(49, 280);
             CbBoxTipo.Name = "CbBoxTipo";
-            CbBoxTipo.Size = new Size(310, 38);
+            CbBoxTipo.Size = new Size(340, 38);
             CbBoxTipo.TabIndex = 25;
             // 
             // CbBoxCategoria
@@ -149,7 +149,7 @@
             CbBoxCategoria.FormattingEnabled = true;
             CbBoxCategoria.Location = new Point(49, 195);
             CbBoxCategoria.Name = "CbBoxCategoria";
-            CbBoxCategoria.Size = new Size(310, 38);
+            CbBoxCategoria.Size = new Size(340, 38);
             CbBoxCategoria.TabIndex = 23;
             // 
             // label6

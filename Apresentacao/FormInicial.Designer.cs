@@ -30,7 +30,7 @@
         {
             PnlMenuLateral = new Panel();
             BtnReceitas = new Button();
-            BtnDespesas = new Button();
+            BtnCadastrarDespesas = new Button();
             BtnDashboard = new Button();
             PnlLinhaRodape = new Panel();
             PnlLinhaLogo = new Panel();
@@ -41,6 +41,7 @@
             pictureBoxLogo = new PictureBox();
             LblTitulo = new Label();
             PnlTelaDinamica = new Panel();
+            btnConsultarDespesas = new Button();
             PnlMenuLateral.SuspendLayout();
             PnlRodapeMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPower).BeginInit();
@@ -51,8 +52,9 @@
             // 
             // PnlMenuLateral
             // 
+            PnlMenuLateral.Controls.Add(btnConsultarDespesas);
             PnlMenuLateral.Controls.Add(BtnReceitas);
-            PnlMenuLateral.Controls.Add(BtnDespesas);
+            PnlMenuLateral.Controls.Add(BtnCadastrarDespesas);
             PnlMenuLateral.Controls.Add(BtnDashboard);
             PnlMenuLateral.Controls.Add(PnlLinhaRodape);
             PnlMenuLateral.Controls.Add(PnlLinhaLogo);
@@ -74,15 +76,15 @@
             BtnReceitas.UseVisualStyleBackColor = true;
             BtnReceitas.Click += BtnReceitas_Click;
             // 
-            // BtnDespesas
+            // BtnCadastrarDespesas
             // 
-            BtnDespesas.Location = new Point(10, 170);
-            BtnDespesas.Name = "BtnDespesas";
-            BtnDespesas.Size = new Size(330, 45);
-            BtnDespesas.TabIndex = 5;
-            BtnDespesas.Text = "Despesas";
-            BtnDespesas.UseVisualStyleBackColor = true;
-            BtnDespesas.Click += BtnDespesas_Click;
+            BtnCadastrarDespesas.Location = new Point(10, 170);
+            BtnCadastrarDespesas.Name = "BtnCadastrarDespesas";
+            BtnCadastrarDespesas.Size = new Size(330, 45);
+            BtnCadastrarDespesas.TabIndex = 5;
+            BtnCadastrarDespesas.Text = "Cadastrar Despesas";
+            BtnCadastrarDespesas.UseVisualStyleBackColor = true;
+            BtnCadastrarDespesas.Click += BtnDespesas_Click;
             // 
             // BtnDashboard
             // 
@@ -174,6 +176,16 @@
             PnlTelaDinamica.Size = new Size(1045, 724);
             PnlTelaDinamica.TabIndex = 2;
             // 
+            // btnConsultarDespesas
+            // 
+            btnConsultarDespesas.Location = new Point(10, 272);
+            btnConsultarDespesas.Name = "btnConsultarDespesas";
+            btnConsultarDespesas.Size = new Size(330, 45);
+            btnConsultarDespesas.TabIndex = 7;
+            btnConsultarDespesas.Text = "Consultar Despesas";
+            btnConsultarDespesas.UseVisualStyleBackColor = true;
+            btnConsultarDespesas.Click += btnConsultarDespesas_Click;
+            // 
             // FormInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -202,11 +214,12 @@
         private Panel PnlLinhaRodape;
         private Button BtnDashboard;
         private Button BtnReceitas;
-        private Button BtnDespesas;
+        private Button BtnCadastrarDespesas;
         private Label LblTitulo;
         private Panel PnlTelaDinamica;
         private PictureBox pictureBoxLogo;
         private Panel panel1;
         private PictureBox pictureBoxPower;
+        private Button btnConsultarDespesas;
     }
 }

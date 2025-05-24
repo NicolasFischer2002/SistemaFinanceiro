@@ -1,3 +1,4 @@
+using SistemaFinanceiro.Apresentacao;
 using SistemaFinanceiro.Apresentacao.Helpers;
 
 namespace SistemaFinanceiro
@@ -14,14 +15,16 @@ namespace SistemaFinanceiro
 
             BotoesMenuLateral = [
                 BtnDashboard,
-                BtnDespesas,
-                BtnReceitas
+                BtnCadastrarDespesas,
+                BtnReceitas,
+                btnConsultarDespesas
             ];
 
             CaminhosIconesBotoes = [
                 "Apresentacao/Imagens/icone_dashboard.png",
                 "Apresentacao/Imagens/icone_despesas.png",
-                "Apresentacao/Imagens/icone_receitas.png"
+                "Apresentacao/Imagens/icone_receitas.png",
+                "Apresentacao/Imagens/icone_consultar_receitas.png"
             ];
 
             InicializarGUIFormInicial();
@@ -148,7 +151,7 @@ namespace SistemaFinanceiro
 
         private void BtnDespesas_Click(object sender, EventArgs e)
         {
-            DestacarBotao(BtnDespesas);
+            DestacarBotao(BtnCadastrarDespesas);
             AbrirFormularioNoPanel(new FormDespesas());
         }
 
@@ -202,6 +205,12 @@ namespace SistemaFinanceiro
 
             if (resp == DialogResult.Yes)
                 Application.Exit();
+        }
+
+        private void btnConsultarDespesas_Click(object sender, EventArgs e)
+        {
+            DestacarBotao(btnConsultarDespesas);
+            AbrirFormularioNoPanel(new FormConsultarDespesas());
         }
     }
 }

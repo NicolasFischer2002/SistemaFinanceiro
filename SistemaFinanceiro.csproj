@@ -28,6 +28,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Apresentacao\Imagens\icone_consultar_receitas.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Apresentacao\Imagens\icone_dashboard.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

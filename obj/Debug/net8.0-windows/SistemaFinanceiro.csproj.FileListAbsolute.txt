@@ -62,3 +62,5 @@ C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\ref
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.pdb
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.genruntimeconfig.cache
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\ref\SistemaFinanceiro.dll
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormConsultarDespesas.resources
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_consultar_receitas.png

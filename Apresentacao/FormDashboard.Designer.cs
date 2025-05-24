@@ -130,7 +130,7 @@
             graficoDespesas.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             graficoDespesas.Legends.Add(legend2);
-            graficoDespesas.Location = new Point(278, 14);
+            graficoDespesas.Location = new Point(389, 15);
             graficoDespesas.Name = "graficoDespesas";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
