@@ -30,7 +30,6 @@
         {
             panel1 = new Panel();
             NumeroParcelas = new NumericUpDown();
-            NumeroParcelas_ = new TextBox();
             label8 = new Label();
             label1 = new Label();
             button1 = new Button();
@@ -55,7 +54,6 @@
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = SystemColors.ScrollBar;
             panel1.Controls.Add(NumeroParcelas);
-            panel1.Controls.Add(NumeroParcelas_);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button1);
@@ -79,26 +77,16 @@
             // 
             // NumeroParcelas
             // 
-            NumeroParcelas.Location = new Point(407, 117);
+            NumeroParcelas.Location = new Point(413, 117);
             NumeroParcelas.Name = "NumeroParcelas";
-            NumeroParcelas.Size = new Size(90, 36);
+            NumeroParcelas.Size = new Size(136, 36);
             NumeroParcelas.TabIndex = 3;
-            // 
-            // NumeroParcelas_
-            // 
-            NumeroParcelas_.Enabled = false;
-            NumeroParcelas_.Font = new Font("Segoe UI", 16F);
-            NumeroParcelas_.Location = new Point(-105, 432);
-            NumeroParcelas_.Name = "NumeroParcelas_";
-            NumeroParcelas_.Size = new Size(190, 36);
-            NumeroParcelas_.TabIndex = 3;
-            NumeroParcelas_.Visible = false;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 16F);
-            label8.Location = new Point(407, 84);
+            label8.Location = new Point(413, 84);
             label8.Name = "label8";
             label8.Size = new Size(90, 30);
             label8.TabIndex = 18;
@@ -138,9 +126,9 @@
             // dateTimePicker
             // 
             dateTimePicker.Font = new Font("Segoe UI", 16F);
-            dateTimePicker.Location = new Point(167, 276);
+            dateTimePicker.Location = new Point(175, 276);
             dateTimePicker.Name = "dateTimePicker";
-            dateTimePicker.Size = new Size(376, 36);
+            dateTimePicker.Size = new Size(610, 36);
             dateTimePicker.TabIndex = 7;
             // 
             // CbBoxCategoria
@@ -156,9 +144,9 @@
             // 
             CbBoxTipo.Font = new Font("Segoe UI", 16F);
             CbBoxTipo.FormattingEnabled = true;
-            CbBoxTipo.Location = new Point(503, 115);
+            CbBoxTipo.Location = new Point(562, 115);
             CbBoxTipo.Name = "CbBoxTipo";
-            CbBoxTipo.Size = new Size(211, 38);
+            CbBoxTipo.Size = new Size(223, 38);
             CbBoxTipo.TabIndex = 5;
             // 
             // CbBoxStatus
@@ -167,7 +155,7 @@
             CbBoxStatus.FormattingEnabled = true;
             CbBoxStatus.Location = new Point(175, 206);
             CbBoxStatus.Name = "CbBoxStatus";
-            CbBoxStatus.Size = new Size(381, 38);
+            CbBoxStatus.Size = new Size(374, 38);
             CbBoxStatus.TabIndex = 4;
             // 
             // label6
@@ -184,7 +172,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16F);
-            label5.Location = new Point(503, 82);
+            label5.Location = new Point(562, 84);
             label5.Name = "label5";
             label5.Size = new Size(56, 30);
             label5.TabIndex = 6;
@@ -266,7 +254,6 @@
         private Label label2;
         private Button button1;
         private Label label1;
-        private TextBox NumeroParcelas_;
         private Label label8;
         private ComboBox CbBoxTipo;
         private Label label5;
