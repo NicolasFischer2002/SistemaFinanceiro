@@ -12,6 +12,7 @@ namespace SistemaFinanceiro
             FormDinamicoConteudo.InicializarGUI(this);
 
             InicializarLabels();
+            InicializarTotalDespesas();
         }
 
         private void InicializarLabels()
@@ -70,6 +71,13 @@ namespace SistemaFinanceiro
             };
 
             GraficoPizzaService.InicializarExistente(graficoDespesas, dados);
+        }
+
+        private async Task InicializarTotalDespesas()
+        {
+            var despesas = await Despesa.ObterTodas();
+            decimal totalDespesas = despesas.Sum(d => d.Valor);
+            lblTotalDespesas.Text = totalDespesas.ToString("C");
         }
     }
 }

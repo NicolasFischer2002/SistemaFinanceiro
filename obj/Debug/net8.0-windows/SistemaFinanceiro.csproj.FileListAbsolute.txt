@@ -28,8 +28,6 @@ C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\Siste
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.csproj.AssemblyReference.cache
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaF.65ED0CCD.Up2Date
-C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Arquivos\Despesas.json
-C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Arquivos\Receitas.json
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\SistemaFinanceiro.exe
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_dashboard.png
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_despesas.png
@@ -64,3 +62,5 @@ C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\Sis
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\ref\SistemaFinanceiro.dll
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormConsultarDespesas.resources
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_consultar_receitas.png
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_editar.png
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_lixo.png

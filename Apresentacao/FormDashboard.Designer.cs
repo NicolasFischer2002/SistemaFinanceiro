@@ -43,6 +43,7 @@
             panel1 = new Panel();
             graficoDespesas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panel2 = new Panel();
+            lblTotalDespesas = new Label();
             lblDespesas = new Label();
             ((System.ComponentModel.ISupportInitialize)graficoGeral).BeginInit();
             pnlSessaoGeral.SuspendLayout();
@@ -142,12 +143,23 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(lblTotalDespesas);
             panel2.Controls.Add(lblDespesas);
             panel2.Dock = DockStyle.Right;
             panel2.Location = new Point(885, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(493, 251);
             panel2.TabIndex = 0;
+            // 
+            // lblTotalDespesas
+            // 
+            lblTotalDespesas.AutoSize = true;
+            lblTotalDespesas.Font = new Font("Segoe UI", 15F);
+            lblTotalDespesas.Location = new Point(228, 160);
+            lblTotalDespesas.Name = "lblTotalDespesas";
+            lblTotalDespesas.Size = new Size(63, 28);
+            lblTotalDespesas.TabIndex = 2;
+            lblTotalDespesas.Text = "Total: ";
             // 
             // lblDespesas
             // 
@@ -196,5 +208,6 @@
         private Panel panel2;
         private Label lblDespesas;
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoDespesas;
+        private Label lblTotalDespesas;
     }
 }

@@ -86,6 +86,7 @@
             NumeroParcelas.Name = "NumeroParcelas";
             NumeroParcelas.Size = new Size(120, 36);
             NumeroParcelas.TabIndex = 33;
+            NumeroParcelas.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label1
             // 
