@@ -4,10 +4,12 @@ namespace SistemaFinanceiro.Apresentacao
 {
     public partial class FormConsultarDespesas : Form
     {
+        private IReadOnlyList<Guid> IdsDespesas;
+
         public FormConsultarDespesas()
         {
             InitializeComponent();
-            
+
             InicializarLabels();
             InicializarDataPickers();
             InicializarGrid();
@@ -91,6 +93,8 @@ namespace SistemaFinanceiro.Apresentacao
         private async Task PreencherGridDespesas()
         {
             List<Despesa> despesas = await Despesa.ObterTodas();
+            IdsDespesas = despesas.Select(d => d.Id).ToList();
+
             gridDespesas.Rows.Clear();
 
             string caminhoIconeLixo = Path.Combine(Application.StartupPath, "Apresentacao", "Imagens", "icone_lixo.png");
@@ -120,6 +124,38 @@ namespace SistemaFinanceiro.Apresentacao
         private void DeixarGridSomenteLeitura()
         {
             gridDespesas.AllowUserToAddRows = false;
+        }
+
+        private async void gridDespesas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica se a linha e coluna clicadas são válidas
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                if (gridDespesas.Columns[e.ColumnIndex].Name == "Editar")
+                {
+                    Console.Beep();
+                }
+                else if (gridDespesas.Columns[e.ColumnIndex].Name == "Excluir")
+                {
+                    var confirmResult = MessageBox.Show(
+                        "Tem certeza que deseja excluir esta despesa?",
+                        "Confirmação",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                    );
+
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        Despesa? despesa = await Despesa.ObterPorIdAsync(IdsDespesas[e.RowIndex]);
+
+                        if (despesa is not null)
+                        {
+                            await despesa.DeletarAsync();
+                            await PreencherGridDespesas();
+                        }
+                    }
+                }
+            }
         }
     }
 }

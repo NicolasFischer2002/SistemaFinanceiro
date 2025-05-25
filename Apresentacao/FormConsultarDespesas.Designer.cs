@@ -95,6 +95,7 @@
             gridDespesas.Name = "gridDespesas";
             gridDespesas.Size = new Size(1370, 605);
             gridDespesas.TabIndex = 0;
+            gridDespesas.CellClick += gridDespesas_CellClick;
             // 
             // FormConsultarDespesas
             // 

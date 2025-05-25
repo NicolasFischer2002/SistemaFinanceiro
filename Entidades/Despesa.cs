@@ -30,9 +30,10 @@ namespace SistemaFinanceiro.Entidades
             await File.AppendAllTextAsync(CaminhoArquivoDespesas, linhaJson + Environment.NewLine);
         }
 
-        public Task ObterPorIdAsync(Guid id)
+        public static async ValueTask<Despesa?> ObterPorIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var despesas = await ObterTodas();
+            return despesas.Where(d => d.Id == id).FirstOrDefault();
         }
 
         public Task AtualizarAsync()
@@ -40,9 +41,22 @@ namespace SistemaFinanceiro.Entidades
             throw new NotImplementedException();
         }
 
-        public Task DeletarAsync(Guid id)
+        public async Task DeletarAsync()
         {
-            throw new NotImplementedException();
+            List<Despesa> despesas = await ObterTodas();
+            despesas.Remove(despesas.Where(d => d.Id == Id).Single());
+
+            File.WriteAllText(CaminhoArquivoDespesas, string.Empty);
+            await SalvarTodasAsync(despesas);
+        }
+
+        private static async Task SalvarTodasAsync(List<Despesa> despesas)
+        {
+            var linhas = despesas.Select(d =>
+                JsonSerializer.Serialize(DespesaMapper.ToDto(d), new JsonSerializerOptions { WriteIndented = false })
+            );
+
+            await File.WriteAllLinesAsync(CaminhoArquivoDespesas, linhas);
         }
 
         public static async ValueTask<List<Despesa>> ObterTodas()
