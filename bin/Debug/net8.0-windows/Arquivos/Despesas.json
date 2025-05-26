@@ -1,0 +1,2 @@
+{"Id":"43014287-0ae1-4825-83b4-f613345b178b","StatusTransacao":"Agendado","Valor":100,"QuantidadeParcelas":1,"Descricao":"Taxa do Detran SP","CategoriaDespesa":"Impostos","DataVencimento":"2025-05-26T12:37:30.3864197-03:00","DataPagamento":null,"TipoPagamento":"Deposito"}
+{"Id":"5647acb7-7c1f-4915-935b-55324300faac","StatusTransacao":"Quitado","Valor":550,"QuantidadeParcelas":1,"Descricao":"Mensalidade Anhanguera","CategoriaDespesa":"Educacao","DataVencimento":"2025-05-05T14:28:23.413","DataPagamento":"2025-05-03T14:28:23.411","TipoPagamento":"PIX"}

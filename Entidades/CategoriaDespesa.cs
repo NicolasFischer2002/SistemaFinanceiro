@@ -2,7 +2,7 @@
 
 namespace SistemaFinanceiro.Entidades
 {
-    internal enum CategoriaDespesa
+    public enum CategoriaDespesa
     {
         [Description("Alimentação")]
         Alimentacao = 0,

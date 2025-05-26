@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace SistemaFinanceiro.Entidades
 {
-    internal class Despesa : Transacao, IRepositorioDespesas
+    public class Despesa : Transacao, IRepositorio, IRepositorioDespesas
     {
         public CategoriaDespesa CategoriaDespesa { get; private set; }
         public DateTime DataVencimento { get; private set; }
@@ -36,9 +36,10 @@ namespace SistemaFinanceiro.Entidades
             return despesas.Where(d => d.Id == id).FirstOrDefault();
         }
 
-        public Task AtualizarAsync()
+        public async Task AtualizarAsync(Despesa novaDespesa)
         {
-            throw new NotImplementedException();
+            await DeletarAsync();
+            await novaDespesa.CadastrarAsync();
         }
 
         public async Task DeletarAsync()
@@ -59,7 +60,7 @@ namespace SistemaFinanceiro.Entidades
             await File.WriteAllLinesAsync(CaminhoArquivoDespesas, linhas);
         }
 
-        public static async ValueTask<List<Despesa>> ObterTodas()
+        public static async ValueTask<List<Despesa>> ObterTodas(Datas? intervalo = null)
         {
             if (!File.Exists(CaminhoArquivoDespesas))
                 return new List<Despesa>();
@@ -69,8 +70,16 @@ namespace SistemaFinanceiro.Entidades
             foreach (var linha in await File.ReadAllLinesAsync(CaminhoArquivoDespesas))
             {
                 if (string.IsNullOrWhiteSpace(linha)) continue;
+
                 var dto = JsonSerializer.Deserialize<DespesaDTO>(linha)!;
-                despesas.Add(DespesaMapper.ToDomain(dto));
+                var despesa = DespesaMapper.ToDomain(dto);
+
+                // Se intervalo foi passado, aplica o filtro
+                if (intervalo == null ||
+                    (despesa.DataVencimento >= intervalo.DataInicial && despesa.DataVencimento <= intervalo.DataFinal))
+                {
+                    despesas.Add(despesa);
+                }
             }
 
             return despesas;

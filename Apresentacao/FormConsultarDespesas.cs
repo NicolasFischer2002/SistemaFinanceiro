@@ -1,4 +1,5 @@
-﻿using SistemaFinanceiro.Entidades;
+﻿using SistemaFinanceiro.Apresentacao.Helpers;
+using SistemaFinanceiro.Entidades;
 
 namespace SistemaFinanceiro.Apresentacao
 {
@@ -13,6 +14,7 @@ namespace SistemaFinanceiro.Apresentacao
             InicializarLabels();
             InicializarDataPickers();
             InicializarGrid();
+            InicializarToolTips();
 
             PreencherGridDespesas();
         }
@@ -52,6 +54,7 @@ namespace SistemaFinanceiro.Apresentacao
             gridDespesas.Columns.Add("Valor", "Valor");
             gridDespesas.Columns.Add("Categoria", "Categoria");
             gridDespesas.Columns.Add("DataPagamento", "Data pag.");
+            gridDespesas.Columns.Add("DataVencimento", "Data venc.");
             gridDespesas.Columns.Add("Descricao", "Descrição");
 
             // Coluna de imagem: Editar
@@ -85,14 +88,16 @@ namespace SistemaFinanceiro.Apresentacao
             gridDespesas.Columns[1].Width = 150;
             gridDespesas.Columns[2].Width = 250;
             gridDespesas.Columns[3].Width = 130;
-            gridDespesas.Columns[4].Width = 400;
-            gridDespesas.Columns[5].Width = 70;
+            gridDespesas.Columns[4].Width = 130;
+            gridDespesas.Columns[5].Width = 400;
             gridDespesas.Columns[6].Width = 70;
+            gridDespesas.Columns[7].Width = 70;
         }
 
         private async Task PreencherGridDespesas()
         {
-            List<Despesa> despesas = await Despesa.ObterTodas();
+            List<Despesa> despesas = await Despesa
+                .ObterTodas(new Datas(dateTimePickerInicial.Value, dateTimePickerFinal.Value));
             IdsDespesas = despesas.Select(d => d.Id).ToList();
 
             gridDespesas.Rows.Clear();
@@ -112,6 +117,7 @@ namespace SistemaFinanceiro.Apresentacao
                     despesa.Valor,
                     despesa.CategoriaDespesa,
                     despesa.DataPagamento,
+                    despesa.DataVencimento,
                     despesa.Descricao,
                     iconeEditar,
                     iconeLixo
@@ -133,7 +139,17 @@ namespace SistemaFinanceiro.Apresentacao
             {
                 if (gridDespesas.Columns[e.ColumnIndex].Name == "Editar")
                 {
-                    Console.Beep();
+                    Despesa? despesa = await Despesa.ObterPorIdAsync(IdsDespesas[e.RowIndex]);
+
+                    if (despesa is not null)
+                    {
+                        FormEditarDespesa formEditarDespesa = new FormEditarDespesa(despesa);
+
+                        if (formEditarDespesa.ShowDialog() == DialogResult.OK)
+                        {
+                            await PreencherGridDespesas();
+                        }
+                    }
                 }
                 else if (gridDespesas.Columns[e.ColumnIndex].Name == "Excluir")
                 {
@@ -156,6 +172,16 @@ namespace SistemaFinanceiro.Apresentacao
                     }
                 }
             }
+        }
+
+        private async void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            await PreencherGridDespesas();
+        }
+
+        private void InicializarToolTips()
+        {
+            ToolTipService.Set(buttonBuscar, "Buscar baseado na data de vencimento");
         }
     }
 }

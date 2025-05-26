@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinanceiro.Entidades
 {
-    internal class Datas
+    public class Datas
     {
         public DateTime DataInicial { get; private set; }
         public DateTime DataFinal { get; private set; }

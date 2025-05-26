@@ -1,6 +1,6 @@
 ﻿namespace SistemaFinanceiro.Entidades
 {
-    internal class Parcela
+    public class Parcela
     {
         public int Numero { get; private set; }
         public decimal Valor { get; private set; }

@@ -2,7 +2,7 @@
 
 namespace SistemaFinanceiro.Entidades
 {
-    internal abstract class Transacao
+    public abstract class Transacao
     {
         public Guid Id { get; init; }
         public StatusTransacao StatusTransacao { get; init; }

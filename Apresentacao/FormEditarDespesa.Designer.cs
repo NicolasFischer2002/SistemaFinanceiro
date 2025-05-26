@@ -1,6 +1,6 @@
-﻿namespace SistemaFinanceiro
+﻿namespace SistemaFinanceiro.Apresentacao
 {
-    partial class FormDespesas
+    partial class FormEditarDespesa
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             label1 = new Label();
             radioButtonDespesaEmAberto = new RadioButton();
             radioButtonDespesaQuitada = new RadioButton();
-            btnInserirDespesa = new Button();
+            btnAtualizarDespesa = new Button();
             CbBoxTipo = new ComboBox();
             CbBoxCategoria = new ComboBox();
             label6 = new Label();
@@ -59,7 +59,7 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(radioButtonDespesaEmAberto);
             panel1.Controls.Add(radioButtonDespesaQuitada);
-            panel1.Controls.Add(btnInserirDespesa);
+            panel1.Controls.Add(btnAtualizarDespesa);
             panel1.Controls.Add(CbBoxTipo);
             panel1.Controls.Add(CbBoxCategoria);
             panel1.Controls.Add(label6);
@@ -74,10 +74,10 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(TxtBoxDescricao);
-            panel1.Location = new Point(220, 26);
+            panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(941, 520);
-            panel1.TabIndex = 3;
+            panel1.TabIndex = 4;
             // 
             // NumeroParcelas
             // 
@@ -94,9 +94,9 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(49, 19);
             label1.Name = "label1";
-            label1.Size = new Size(279, 32);
+            label1.Size = new Size(232, 32);
             label1.TabIndex = 32;
-            label1.Text = "CADASTRE SUA DESPESA";
+            label1.Text = "ATUALIZAR DESPESA";
             // 
             // radioButtonDespesaEmAberto
             // 
@@ -124,16 +124,16 @@
             radioButtonDespesaQuitada.UseVisualStyleBackColor = true;
             radioButtonDespesaQuitada.CheckedChanged += radioButtonDespesaQuitada_CheckedChanged;
             // 
-            // btnInserirDespesa
+            // btnAtualizarDespesa
             // 
-            btnInserirDespesa.Font = new Font("Segoe UI", 16F);
-            btnInserirDespesa.Location = new Point(337, 425);
-            btnInserirDespesa.Name = "btnInserirDespesa";
-            btnInserirDespesa.Size = new Size(300, 70);
-            btnInserirDespesa.TabIndex = 30;
-            btnInserirDespesa.Text = "CADASTRAR";
-            btnInserirDespesa.UseVisualStyleBackColor = true;
-            btnInserirDespesa.Click += btnInserirDespesa_Click;
+            btnAtualizarDespesa.Font = new Font("Segoe UI", 16F);
+            btnAtualizarDespesa.Location = new Point(337, 425);
+            btnAtualizarDespesa.Name = "btnAtualizarDespesa";
+            btnAtualizarDespesa.Size = new Size(300, 70);
+            btnAtualizarDespesa.TabIndex = 30;
+            btnAtualizarDespesa.Text = "ATUALIZAR";
+            btnAtualizarDespesa.UseVisualStyleBackColor = true;
+            btnAtualizarDespesa.Click += btnInserirDespesa_Click;
             // 
             // CbBoxTipo
             // 
@@ -169,9 +169,9 @@
             label9.Font = new Font("Segoe UI", 16F);
             label9.Location = new Point(49, 247);
             label9.Name = "label9";
-            label9.Size = new Size(56, 30);
+            label9.Size = new Size(204, 30);
             label9.TabIndex = 31;
-            label9.Text = "Tipo";
+            label9.Text = "Tipo de pagamento";
             // 
             // dateTimePickerPagamento
             // 
@@ -266,16 +266,15 @@
             TxtBoxDescricao.Size = new Size(842, 36);
             TxtBoxDescricao.TabIndex = 29;
             // 
-            // FormDespesas
+            // FormEditarDespesa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Cyan;
-            ClientSize = new Size(1370, 685);
+            ClientSize = new Size(972, 546);
             Controls.Add(panel1);
-            Name = "FormDespesas";
-            Text = "FormDespesas";
-            Load += FormDespesas_Load;
+            Name = "FormEditarDespesa";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Editar Despesa";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)NumeroParcelas).EndInit();
@@ -283,25 +282,26 @@
         }
 
         #endregion
+
         private Panel panel1;
-        private TextBox TxtBoxDescricao;
-        private Label label2;
+        private NumericUpDown NumeroParcelas;
+        private Label label1;
+        private RadioButton radioButtonDespesaEmAberto;
+        private RadioButton radioButtonDespesaQuitada;
+        private Button btnAtualizarDespesa;
+        private ComboBox CbBoxTipo;
+        private ComboBox CbBoxCategoria;
+        private Label label6;
+        private Label label9;
+        private DateTimePicker dateTimePickerPagamento;
+        private Label label7;
+        private DateTimePicker dateTimePickerVencimento;
+        private ComboBox CbBoxStatus;
+        private Label label4;
         private Label label8;
         private TextBox TxtBoxValor;
         private Label label3;
-        private ComboBox CbBoxStatus;
-        private Label label4;
-        private ComboBox CbBoxCategoria;
-        private Label label6;
-        private Label label7;
-        private DateTimePicker dateTimePickerVencimento;
-        private DateTimePicker dateTimePickerPagamento;
-        private ComboBox CbBoxTipo;
-        private Label label9;
-        private Button btnInserirDespesa;
-        private RadioButton radioButtonDespesaQuitada;
-        private RadioButton radioButtonDespesaEmAberto;
-        private Label label1;
-        private NumericUpDown NumeroParcelas;
+        private Label label2;
+        private TextBox TxtBoxDescricao;
     }
 }

@@ -34,6 +34,7 @@
             lblTitulo = new Label();
             panelCenter = new Panel();
             gridDespesas = new DataGridView();
+            buttonBuscar = new Button();
             panelTop.SuspendLayout();
             panelCenter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridDespesas).BeginInit();
@@ -42,6 +43,7 @@
             // panelTop
             // 
             panelTop.BackColor = Color.LightSkyBlue;
+            panelTop.Controls.Add(buttonBuscar);
             panelTop.Controls.Add(dateTimePickerFinal);
             panelTop.Controls.Add(dateTimePickerInicial);
             panelTop.Controls.Add(lblTitulo);
@@ -97,6 +99,16 @@
             gridDespesas.TabIndex = 0;
             gridDespesas.CellClick += gridDespesas_CellClick;
             // 
+            // buttonBuscar
+            // 
+            buttonBuscar.Location = new Point(1107, 28);
+            buttonBuscar.Name = "buttonBuscar";
+            buttonBuscar.Size = new Size(75, 30);
+            buttonBuscar.TabIndex = 3;
+            buttonBuscar.Text = "Buscar";
+            buttonBuscar.UseVisualStyleBackColor = true;
+            buttonBuscar.Click += buttonBuscar_Click;
+            // 
             // FormConsultarDespesas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -121,5 +133,6 @@
         private DateTimePicker dateTimePickerInicial;
         private Panel panelCenter;
         private DataGridView gridDespesas;
+        private Button buttonBuscar;
     }
 }

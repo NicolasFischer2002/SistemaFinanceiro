@@ -4,9 +4,9 @@ using SistemaFinanceiro.Helpers;
 
 namespace SistemaFinanceiro
 {
-    public partial class FormDespesas : Form
+    public partial class FormCadastrarDespesas : Form
     {
-        public FormDespesas()
+        public FormCadastrarDespesas()
         {
             InitializeComponent();
             FormDinamicoConteudo.InicializarGUI(this);

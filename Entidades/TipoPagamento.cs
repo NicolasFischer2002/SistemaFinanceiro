@@ -2,7 +2,7 @@
 
 namespace SistemaFinanceiro.Entidades
 {
-    internal enum TipoPagamento
+    public enum TipoPagamento
     {
         [Description("Pagamento via PIX")]
         PIX = 0,

@@ -2,7 +2,7 @@
 
 namespace SistemaFinanceiro.Entidades
 {
-    internal enum StatusTransacao
+    public enum StatusTransacao
     {
         [Description("Quitado")]
         Quitado = 0,

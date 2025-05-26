@@ -34,7 +34,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            label1 = new Label();
             graficoGeral = new System.Windows.Forms.DataVisualization.Charting.Chart();
             pnlSessaoGeral = new Panel();
             pnlSessaoGeralDireito = new Panel();
@@ -45,6 +44,11 @@
             panel2 = new Panel();
             lblTotalDespesas = new Label();
             lblDespesas = new Label();
+            panelTop = new Panel();
+            buttonBuscar = new Button();
+            dateTimePickerFinal = new DateTimePicker();
+            dateTimePickerInicial = new DateTimePicker();
+            lblTitulo = new Label();
             ((System.ComponentModel.ISupportInitialize)graficoGeral).BeginInit();
             pnlSessaoGeral.SuspendLayout();
             pnlSessaoGeralDireito.SuspendLayout();
@@ -52,17 +56,8 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)graficoDespesas).BeginInit();
             panel2.SuspendLayout();
+            panelTop.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(211, 32);
-            label1.TabIndex = 2;
-            label1.Text = "TELA DASHBOARD";
             // 
             // graficoGeral
             // 
@@ -84,7 +79,7 @@
             // 
             pnlSessaoGeral.Controls.Add(pnlSessaoGeralDireito);
             pnlSessaoGeral.Controls.Add(pnlSessaoGeralEsquerdo);
-            pnlSessaoGeral.Location = new Point(1, 61);
+            pnlSessaoGeral.Location = new Point(1, 127);
             pnlSessaoGeral.Name = "pnlSessaoGeral";
             pnlSessaoGeral.Size = new Size(1378, 251);
             pnlSessaoGeral.TabIndex = 4;
@@ -120,7 +115,7 @@
             // 
             panel1.Controls.Add(graficoDespesas);
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(1, 339);
+            panel1.Location = new Point(1, 395);
             panel1.Name = "panel1";
             panel1.Size = new Size(1378, 251);
             panel1.TabIndex = 5;
@@ -171,15 +166,65 @@
             lblDespesas.TabIndex = 1;
             lblDespesas.Text = "Despesas";
             // 
+            // panelTop
+            // 
+            panelTop.BackColor = Color.FromArgb(0, 192, 0);
+            panelTop.Controls.Add(buttonBuscar);
+            panelTop.Controls.Add(dateTimePickerFinal);
+            panelTop.Controls.Add(dateTimePickerInicial);
+            panelTop.Controls.Add(lblTitulo);
+            panelTop.Dock = DockStyle.Top;
+            panelTop.Location = new Point(0, 0);
+            panelTop.Name = "panelTop";
+            panelTop.Size = new Size(1379, 80);
+            panelTop.TabIndex = 6;
+            // 
+            // buttonBuscar
+            // 
+            buttonBuscar.Location = new Point(1107, 28);
+            buttonBuscar.Name = "buttonBuscar";
+            buttonBuscar.Size = new Size(75, 30);
+            buttonBuscar.TabIndex = 3;
+            buttonBuscar.Text = "Buscar";
+            buttonBuscar.UseVisualStyleBackColor = true;
+            buttonBuscar.Click += buttonBuscar_Click;
+            // 
+            // dateTimePickerFinal
+            // 
+            dateTimePickerFinal.CalendarFont = new Font("Segoe UI", 17F);
+            dateTimePickerFinal.Font = new Font("Segoe UI", 12F);
+            dateTimePickerFinal.Location = new Point(740, 28);
+            dateTimePickerFinal.Name = "dateTimePickerFinal";
+            dateTimePickerFinal.Size = new Size(345, 29);
+            dateTimePickerFinal.TabIndex = 2;
+            // 
+            // dateTimePickerInicial
+            // 
+            dateTimePickerInicial.CalendarFont = new Font("Segoe UI", 17F);
+            dateTimePickerInicial.Font = new Font("Segoe UI", 12F);
+            dateTimePickerInicial.Location = new Point(379, 28);
+            dateTimePickerInicial.Name = "dateTimePickerInicial";
+            dateTimePickerInicial.Size = new Size(345, 29);
+            dateTimePickerInicial.TabIndex = 1;
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Location = new Point(29, 27);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(160, 15);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Transações cadastradas entre";
+            // 
             // FormDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 192, 0);
             ClientSize = new Size(1379, 685);
+            Controls.Add(panelTop);
             Controls.Add(panel1);
             Controls.Add(pnlSessaoGeral);
-            Controls.Add(label1);
             Name = "FormDashboard";
             Text = "Form1";
             Load += FormDashboard_Load;
@@ -192,13 +237,12 @@
             ((System.ComponentModel.ISupportInitialize)graficoDespesas).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panelTop.ResumeLayout(false);
+            panelTop.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoGeral;
         private Panel pnlSessaoGeral;
         private Panel pnlSessaoGeralEsquerdo;
@@ -209,5 +253,10 @@
         private Label lblDespesas;
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoDespesas;
         private Label lblTotalDespesas;
+        private Panel panelTop;
+        private Button buttonBuscar;
+        private DateTimePicker dateTimePickerFinal;
+        private DateTimePicker dateTimePickerInicial;
+        private Label lblTitulo;
     }
 }

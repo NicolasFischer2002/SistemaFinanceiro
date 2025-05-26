@@ -152,7 +152,7 @@ namespace SistemaFinanceiro
         private void BtnDespesas_Click(object sender, EventArgs e)
         {
             DestacarBotao(BtnCadastrarDespesas);
-            AbrirFormularioNoPanel(new FormDespesas());
+            AbrirFormularioNoPanel(new FormCadastrarDespesas());
         }
 
         private void BtnReceitas_Click(object sender, EventArgs e)

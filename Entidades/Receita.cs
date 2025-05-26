@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace SistemaFinanceiro.Entidades
 {
-    internal class Receita : Transacao, IRepositorioReceitas
+    internal class Receita : Transacao, IRepositorio, IRepositorioReceitas
     {
         public CategoriaReceita CategoriaReceita { get; init; }
         public DateTime DataRecebimento { get; init; }
@@ -27,17 +27,7 @@ namespace SistemaFinanceiro.Entidades
             await File.AppendAllTextAsync(CaminhoArquivoReceitas, linhaJson + Environment.NewLine);
         }
 
-        public Task ObterPorIdAsync(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task AtualizarAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task DeletarAsync(Guid id)
+        public static Task ObterPorIdAsync(Guid id)
         {
             throw new NotImplementedException();
         }
@@ -68,6 +58,14 @@ namespace SistemaFinanceiro.Entidades
                 .Sum(r => r.Valor);
         }
 
+        public Task DeletarAsync()
+        {
+            throw new NotImplementedException();
+        }
 
+        public Task AtualizarAsync(Receita novaReceita)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
