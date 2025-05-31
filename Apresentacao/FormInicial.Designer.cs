@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             PnlMenuLateral = new Panel();
+            BtnConsultarReceitas = new Button();
+            BtnConsultarDespesas = new Button();
             BtnReceitas = new Button();
             BtnCadastrarDespesas = new Button();
             BtnDashboard = new Button();
@@ -41,7 +43,6 @@
             pictureBoxLogo = new PictureBox();
             LblTitulo = new Label();
             PnlTelaDinamica = new Panel();
-            btnConsultarDespesas = new Button();
             PnlMenuLateral.SuspendLayout();
             PnlRodapeMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPower).BeginInit();
@@ -52,7 +53,8 @@
             // 
             // PnlMenuLateral
             // 
-            PnlMenuLateral.Controls.Add(btnConsultarDespesas);
+            PnlMenuLateral.Controls.Add(BtnConsultarReceitas);
+            PnlMenuLateral.Controls.Add(BtnConsultarDespesas);
             PnlMenuLateral.Controls.Add(BtnReceitas);
             PnlMenuLateral.Controls.Add(BtnCadastrarDespesas);
             PnlMenuLateral.Controls.Add(BtnDashboard);
@@ -66,13 +68,33 @@
             PnlMenuLateral.Size = new Size(350, 724);
             PnlMenuLateral.TabIndex = 1;
             // 
+            // BtnConsultarReceitas
+            // 
+            BtnConsultarReceitas.Location = new Point(10, 323);
+            BtnConsultarReceitas.Name = "BtnConsultarReceitas";
+            BtnConsultarReceitas.Size = new Size(330, 45);
+            BtnConsultarReceitas.TabIndex = 8;
+            BtnConsultarReceitas.Text = "Consultar Receitas";
+            BtnConsultarReceitas.UseVisualStyleBackColor = true;
+            BtnConsultarReceitas.Click += btnConsultarReceitas_Click;
+            // 
+            // BtnConsultarDespesas
+            // 
+            BtnConsultarDespesas.Location = new Point(10, 272);
+            BtnConsultarDespesas.Name = "BtnConsultarDespesas";
+            BtnConsultarDespesas.Size = new Size(330, 45);
+            BtnConsultarDespesas.TabIndex = 7;
+            BtnConsultarDespesas.Text = "Consultar Despesas";
+            BtnConsultarDespesas.UseVisualStyleBackColor = true;
+            BtnConsultarDespesas.Click += btnConsultarDespesas_Click;
+            // 
             // BtnReceitas
             // 
             BtnReceitas.Location = new Point(10, 221);
             BtnReceitas.Name = "BtnReceitas";
             BtnReceitas.Size = new Size(330, 45);
             BtnReceitas.TabIndex = 6;
-            BtnReceitas.Text = "Receitas";
+            BtnReceitas.Text = "Cadastrar Receitas";
             BtnReceitas.UseVisualStyleBackColor = true;
             BtnReceitas.Click += BtnReceitas_Click;
             // 
@@ -173,24 +195,14 @@
             PnlTelaDinamica.Dock = DockStyle.Fill;
             PnlTelaDinamica.Location = new Point(350, 0);
             PnlTelaDinamica.Name = "PnlTelaDinamica";
-            PnlTelaDinamica.Size = new Size(1045, 724);
+            PnlTelaDinamica.Size = new Size(1020, 724);
             PnlTelaDinamica.TabIndex = 2;
-            // 
-            // btnConsultarDespesas
-            // 
-            btnConsultarDespesas.Location = new Point(10, 272);
-            btnConsultarDespesas.Name = "btnConsultarDespesas";
-            btnConsultarDespesas.Size = new Size(330, 45);
-            btnConsultarDespesas.TabIndex = 7;
-            btnConsultarDespesas.Text = "Consultar Despesas";
-            btnConsultarDespesas.UseVisualStyleBackColor = true;
-            btnConsultarDespesas.Click += btnConsultarDespesas_Click;
             // 
             // FormInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1395, 724);
+            ClientSize = new Size(1370, 724);
             Controls.Add(PnlTelaDinamica);
             Controls.Add(PnlMenuLateral);
             Name = "FormInicial";
@@ -220,6 +232,7 @@
         private PictureBox pictureBoxLogo;
         private Panel panel1;
         private PictureBox pictureBoxPower;
-        private Button btnConsultarDespesas;
+        private Button BtnConsultarDespesas;
+        private Button BtnConsultarReceitas;
     }
 }

@@ -4,9 +4,9 @@ using System.Text.Json;
 
 namespace SistemaFinanceiro.Entidades
 {
-    internal class Receita : Transacao, IRepositorio, IRepositorioReceitas
+    public class Receita : Transacao, IRepositorio, IRepositorioReceitas
     {
-        public CategoriaReceita CategoriaReceita { get; init; }
+        public CategoriaReceita CategoriaReceita { get; init; }       
         public DateTime DataRecebimento { get; init; }
         public TipoPagamento TipoPagamento { get; init; }
         private const string CaminhoArquivoReceitas = "Arquivos/Receitas.json";
@@ -27,12 +27,13 @@ namespace SistemaFinanceiro.Entidades
             await File.AppendAllTextAsync(CaminhoArquivoReceitas, linhaJson + Environment.NewLine);
         }
 
-        public static Task ObterPorIdAsync(Guid id)
+        public static async ValueTask<Receita?> ObterPorIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var receitas = await ObterTodas();
+            return receitas.Where(r => r.Id == id).FirstOrDefault();
         }
 
-        public static async ValueTask<List<Receita>> ObterTodas()
+        public static async ValueTask<List<Receita>> ObterTodas(Datas? intervalo = null)
         {
             if (!File.Exists(CaminhoArquivoReceitas))
                 return new List<Receita>();
@@ -66,6 +67,16 @@ namespace SistemaFinanceiro.Entidades
         public Task AtualizarAsync(Receita novaReceita)
         {
             throw new NotImplementedException();
+        }
+
+        public static decimal ValorPorCategoria(List<Receita> receitas, Datas datas, CategoriaReceita categoria)
+        {
+            return receitas
+                .Where(r =>
+                    r.CategoriaReceita == categoria
+                    && r.DataRecebimento >= datas.DataInicial
+                    && r.DataRecebimento <= datas.DataFinal)
+                .Sum(r => r.Valor);
         }
     }
 }

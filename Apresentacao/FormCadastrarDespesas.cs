@@ -19,7 +19,7 @@ namespace SistemaFinanceiro
 
         private void FormDespesas_Load(object sender, EventArgs e)
         {
-            BackColor = Color.FromArgb(0xB2, 0xDB, 0xD5);
+            // BackColor = Color.FromArgb(0xB2, 0xDB, 0xD5);
 
             PreencherComboBoxStatus();
             PreencherComboBoxTipoPagamento();

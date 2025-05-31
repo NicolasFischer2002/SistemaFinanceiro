@@ -32,7 +32,16 @@ namespace SistemaFinanceiro
 
 
                 await receita.CadastrarAsync();
-                MessageBox.Show("Receita cadastrada!");
+               
+                LimparCampos();
+
+                MessageBox.Show(
+                    $"Receita registrada com sucesso!\n\n" +
+                    "Tudo certo, continue assim!",
+                    "Sucesso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
             }
             catch (Exception ex)
             {
@@ -68,6 +77,16 @@ namespace SistemaFinanceiro
             CbBoxCategoria.DisplayMember = "Description";
             CbBoxCategoria.ValueMember = "Value";
             CbBoxCategoria.DataSource = listaCategoria;
+        }
+
+        private void LimparCampos()
+        {
+            TxtBoxValor.Text = "";
+            CbBoxStatus.SelectedIndex = 0;
+            CbBoxCategoria.SelectedIndex = 0;
+            dateTimePicker.Value = DateTime.Now;
+            CbBoxTipo.SelectedIndex = 0;
+            TxtBoxDescricao.Text = "";
         }
     }
 }

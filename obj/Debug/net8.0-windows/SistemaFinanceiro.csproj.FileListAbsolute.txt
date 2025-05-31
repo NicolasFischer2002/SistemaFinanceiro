@@ -33,8 +33,6 @@ C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apr
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_logo.png
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_power.png
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_receitas.png
-C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Arquivos\Despesas.json
-C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Arquivos\Receitas.json
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\SistemaFinanceiro.deps.json
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\SistemaFinanceiro.runtimeconfig.json
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\SistemaFinanceiro.dll
@@ -43,7 +41,6 @@ C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Win
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.csproj.AssemblyReference.cache
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.FormDashboard.resources
-C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.FormDespesas.resources
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.FormInicial.resources
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.FormReceitas.resources
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Properties.Resources.resources
@@ -65,3 +62,12 @@ C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\Siste
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_lixo.png
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormEditarDespesa.resources
 C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.FormCadastrarDespesas.resources
+C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_consultar_receitas.png
+C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_editar.png
+C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\bin\Debug\net8.0-windows\Apresentacao\Imagens\icone_lixo.png
+C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.FormCadastrarDespesas.resources
+C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormEditarDespesa.resources
+C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormConsultarDespesas.resources
+C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao..resources
+C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormConsultarReceitas.resources
+C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormEditarReceita.resources

@@ -80,7 +80,8 @@
             NumeroParcelas.Location = new Point(413, 117);
             NumeroParcelas.Name = "NumeroParcelas";
             NumeroParcelas.Size = new Size(136, 36);
-            NumeroParcelas.TabIndex = 3;
+            NumeroParcelas.TabIndex = 2;
+            NumeroParcelas.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label8
             // 
@@ -129,7 +130,7 @@
             dateTimePicker.Location = new Point(175, 276);
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(610, 36);
-            dateTimePicker.TabIndex = 7;
+            dateTimePicker.TabIndex = 6;
             // 
             // CbBoxCategoria
             // 
@@ -138,7 +139,7 @@
             CbBoxCategoria.Location = new Point(562, 206);
             CbBoxCategoria.Name = "CbBoxCategoria";
             CbBoxCategoria.Size = new Size(223, 38);
-            CbBoxCategoria.TabIndex = 6;
+            CbBoxCategoria.TabIndex = 5;
             // 
             // CbBoxTipo
             // 
@@ -147,7 +148,7 @@
             CbBoxTipo.Location = new Point(562, 115);
             CbBoxTipo.Name = "CbBoxTipo";
             CbBoxTipo.Size = new Size(223, 38);
-            CbBoxTipo.TabIndex = 5;
+            CbBoxTipo.TabIndex = 3;
             // 
             // CbBoxStatus
             // 
@@ -194,7 +195,7 @@
             TxtBoxValor.Location = new Point(175, 117);
             TxtBoxValor.Name = "TxtBoxValor";
             TxtBoxValor.Size = new Size(223, 36);
-            TxtBoxValor.TabIndex = 2;
+            TxtBoxValor.TabIndex = 1;
             // 
             // label3
             // 
@@ -212,7 +213,7 @@
             TxtBoxDescricao.Location = new Point(175, 356);
             TxtBoxDescricao.Name = "TxtBoxDescricao";
             TxtBoxDescricao.Size = new Size(610, 36);
-            TxtBoxDescricao.TabIndex = 1;
+            TxtBoxDescricao.TabIndex = 7;
             // 
             // label2
             // 
