@@ -34,46 +34,47 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            graficoGeral = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            graficoReceita = new System.Windows.Forms.DataVisualization.Charting.Chart();
             pnlSessaoGeral = new Panel();
             pnlSessaoGeralDireito = new Panel();
             pnlSessaoGeralEsquerdo = new Panel();
+            lblTotalReceitas = new Label();
             lblSessaoGeralEsquerda = new Label();
             panel1 = new Panel();
-            graficoDespesas = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            panel2 = new Panel();
             lblTotalDespesas = new Label();
             lblDespesas = new Label();
+            panel2 = new Panel();
+            graficoDespesas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panelTop = new Panel();
             buttonBuscar = new Button();
             dateTimePickerFinal = new DateTimePicker();
             dateTimePickerInicial = new DateTimePicker();
             lblTitulo = new Label();
-            ((System.ComponentModel.ISupportInitialize)graficoGeral).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)graficoReceita).BeginInit();
             pnlSessaoGeral.SuspendLayout();
             pnlSessaoGeralDireito.SuspendLayout();
             pnlSessaoGeralEsquerdo.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)graficoDespesas).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)graficoDespesas).BeginInit();
             panelTop.SuspendLayout();
             SuspendLayout();
             // 
-            // graficoGeral
+            // graficoReceita
             // 
             chartArea1.Name = "ChartArea1";
-            graficoGeral.ChartAreas.Add(chartArea1);
+            graficoReceita.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            graficoGeral.Legends.Add(legend1);
-            graficoGeral.Location = new Point(438, 17);
-            graficoGeral.Name = "graficoGeral";
+            graficoReceita.Legends.Add(legend1);
+            graficoReceita.Location = new Point(13, 18);
+            graficoReceita.Name = "graficoReceita";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            graficoGeral.Series.Add(series1);
-            graficoGeral.Size = new Size(288, 220);
-            graficoGeral.TabIndex = 3;
-            graficoGeral.Text = "chart1";
+            graficoReceita.Series.Add(series1);
+            graficoReceita.Size = new Size(288, 220);
+            graficoReceita.TabIndex = 3;
+            graficoReceita.Text = "chart1";
             // 
             // pnlSessaoGeral
             // 
@@ -86,39 +87,81 @@
             // 
             // pnlSessaoGeralDireito
             // 
-            pnlSessaoGeralDireito.Controls.Add(graficoGeral);
+            pnlSessaoGeralDireito.Controls.Add(graficoReceita);
             pnlSessaoGeralDireito.Dock = DockStyle.Right;
-            pnlSessaoGeralDireito.Location = new Point(493, 0);
+            pnlSessaoGeralDireito.Location = new Point(267, 0);
             pnlSessaoGeralDireito.Name = "pnlSessaoGeralDireito";
-            pnlSessaoGeralDireito.Size = new Size(885, 251);
+            pnlSessaoGeralDireito.Size = new Size(1111, 251);
             pnlSessaoGeralDireito.TabIndex = 1;
             // 
             // pnlSessaoGeralEsquerdo
             // 
+            pnlSessaoGeralEsquerdo.Controls.Add(lblTotalReceitas);
             pnlSessaoGeralEsquerdo.Controls.Add(lblSessaoGeralEsquerda);
             pnlSessaoGeralEsquerdo.Dock = DockStyle.Left;
             pnlSessaoGeralEsquerdo.Location = new Point(0, 0);
             pnlSessaoGeralEsquerdo.Name = "pnlSessaoGeralEsquerdo";
-            pnlSessaoGeralEsquerdo.Size = new Size(493, 251);
+            pnlSessaoGeralEsquerdo.Size = new Size(261, 251);
             pnlSessaoGeralEsquerdo.TabIndex = 0;
+            // 
+            // lblTotalReceitas
+            // 
+            lblTotalReceitas.AutoSize = true;
+            lblTotalReceitas.Font = new Font("Segoe UI", 15F);
+            lblTotalReceitas.Location = new Point(28, 143);
+            lblTotalReceitas.Name = "lblTotalReceitas";
+            lblTotalReceitas.Size = new Size(63, 28);
+            lblTotalReceitas.TabIndex = 3;
+            lblTotalReceitas.Text = "Total: ";
             // 
             // lblSessaoGeralEsquerda
             // 
             lblSessaoGeralEsquerda.AutoSize = true;
-            lblSessaoGeralEsquerda.Location = new Point(111, 125);
+            lblSessaoGeralEsquerda.Font = new Font("Segoe UI", 15F);
+            lblSessaoGeralEsquerda.Location = new Point(28, 101);
             lblSessaoGeralEsquerda.Name = "lblSessaoGeralEsquerda";
-            lblSessaoGeralEsquerda.Size = new Size(111, 15);
+            lblSessaoGeralEsquerda.Size = new Size(82, 28);
             lblSessaoGeralEsquerda.TabIndex = 0;
-            lblSessaoGeralEsquerda.Text = "Receitas X Despesas";
+            lblSessaoGeralEsquerda.Text = "Receitas";
             // 
             // panel1
             // 
-            panel1.Controls.Add(graficoDespesas);
+            panel1.Controls.Add(lblTotalDespesas);
+            panel1.Controls.Add(lblDespesas);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(1, 395);
             panel1.Name = "panel1";
             panel1.Size = new Size(1378, 251);
             panel1.TabIndex = 5;
+            // 
+            // lblTotalDespesas
+            // 
+            lblTotalDespesas.AutoSize = true;
+            lblTotalDespesas.Font = new Font("Segoe UI", 15F);
+            lblTotalDespesas.Location = new Point(28, 118);
+            lblTotalDespesas.Name = "lblTotalDespesas";
+            lblTotalDespesas.Size = new Size(63, 28);
+            lblTotalDespesas.TabIndex = 6;
+            lblTotalDespesas.Text = "Total: ";
+            // 
+            // lblDespesas
+            // 
+            lblDespesas.AutoSize = true;
+            lblDespesas.Font = new Font("Segoe UI", 15F);
+            lblDespesas.Location = new Point(28, 74);
+            lblDespesas.Name = "lblDespesas";
+            lblDespesas.Size = new Size(92, 28);
+            lblDespesas.TabIndex = 5;
+            lblDespesas.Text = "Despesas";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(graficoDespesas);
+            panel2.Dock = DockStyle.Right;
+            panel2.Location = new Point(267, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1111, 251);
+            panel2.TabIndex = 0;
             // 
             // graficoDespesas
             // 
@@ -126,7 +169,7 @@
             graficoDespesas.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             graficoDespesas.Legends.Add(legend2);
-            graficoDespesas.Location = new Point(389, 15);
+            graficoDespesas.Location = new Point(13, 12);
             graficoDespesas.Name = "graficoDespesas";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
@@ -136,39 +179,9 @@
             graficoDespesas.TabIndex = 4;
             graficoDespesas.Text = "chart1";
             // 
-            // panel2
-            // 
-            panel2.Controls.Add(lblTotalDespesas);
-            panel2.Controls.Add(lblDespesas);
-            panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(885, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(493, 251);
-            panel2.TabIndex = 0;
-            // 
-            // lblTotalDespesas
-            // 
-            lblTotalDespesas.AutoSize = true;
-            lblTotalDespesas.Font = new Font("Segoe UI", 15F);
-            lblTotalDespesas.Location = new Point(228, 160);
-            lblTotalDespesas.Name = "lblTotalDespesas";
-            lblTotalDespesas.Size = new Size(63, 28);
-            lblTotalDespesas.TabIndex = 2;
-            lblTotalDespesas.Text = "Total: ";
-            // 
-            // lblDespesas
-            // 
-            lblDespesas.AutoSize = true;
-            lblDespesas.Font = new Font("Segoe UI", 15F);
-            lblDespesas.Location = new Point(228, 116);
-            lblDespesas.Name = "lblDespesas";
-            lblDespesas.Size = new Size(92, 28);
-            lblDespesas.TabIndex = 1;
-            lblDespesas.Text = "Despesas";
-            // 
             // panelTop
             // 
-            panelTop.BackColor = Color.FromArgb(0, 192, 0);
+            panelTop.BackColor = Color.FromArgb(64, 64, 64);
             panelTop.Controls.Add(buttonBuscar);
             panelTop.Controls.Add(dateTimePickerFinal);
             panelTop.Controls.Add(dateTimePickerInicial);
@@ -176,7 +189,7 @@
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(0, 0);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1379, 80);
+            panelTop.Size = new Size(1370, 80);
             panelTop.TabIndex = 6;
             // 
             // buttonBuscar
@@ -210,6 +223,7 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
+            lblTitulo.ForeColor = Color.Snow;
             lblTitulo.Location = new Point(29, 27);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(160, 15);
@@ -220,43 +234,44 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(0, 192, 0);
-            ClientSize = new Size(1379, 685);
+            BackColor = Color.Silver;
+            ClientSize = new Size(1370, 685);
             Controls.Add(panelTop);
             Controls.Add(panel1);
             Controls.Add(pnlSessaoGeral);
             Name = "FormDashboard";
             Text = "Form1";
             Load += FormDashboard_Load;
-            ((System.ComponentModel.ISupportInitialize)graficoGeral).EndInit();
+            ((System.ComponentModel.ISupportInitialize)graficoReceita).EndInit();
             pnlSessaoGeral.ResumeLayout(false);
             pnlSessaoGeralDireito.ResumeLayout(false);
             pnlSessaoGeralEsquerdo.ResumeLayout(false);
             pnlSessaoGeralEsquerdo.PerformLayout();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)graficoDespesas).EndInit();
+            panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)graficoDespesas).EndInit();
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-        private System.Windows.Forms.DataVisualization.Charting.Chart graficoGeral;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graficoReceita;
         private Panel pnlSessaoGeral;
         private Panel pnlSessaoGeralEsquerdo;
         private Panel pnlSessaoGeralDireito;
         private Label lblSessaoGeralEsquerda;
         private Panel panel1;
         private Panel panel2;
-        private Label lblDespesas;
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoDespesas;
-        private Label lblTotalDespesas;
         private Panel panelTop;
         private Button buttonBuscar;
         private DateTimePicker dateTimePickerFinal;
         private DateTimePicker dateTimePickerInicial;
         private Label lblTitulo;
+        private Label lblTotalReceitas;
+        private Label lblTotalDespesas;
+        private Label lblDespesas;
     }
 }

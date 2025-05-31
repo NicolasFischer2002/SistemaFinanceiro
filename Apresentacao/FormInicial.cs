@@ -17,13 +17,15 @@ namespace SistemaFinanceiro
                 BtnDashboard,
                 BtnCadastrarDespesas,
                 BtnReceitas,
-                btnConsultarDespesas
+                BtnConsultarDespesas,
+                BtnConsultarReceitas
             ];
 
             CaminhosIconesBotoes = [
                 "Apresentacao/Imagens/icone_dashboard.png",
                 "Apresentacao/Imagens/icone_despesas.png",
                 "Apresentacao/Imagens/icone_receitas.png",
+                "Apresentacao/Imagens/icone_consultar_receitas.png",
                 "Apresentacao/Imagens/icone_consultar_receitas.png"
             ];
 
@@ -209,8 +211,14 @@ namespace SistemaFinanceiro
 
         private void btnConsultarDespesas_Click(object sender, EventArgs e)
         {
-            DestacarBotao(btnConsultarDespesas);
+            DestacarBotao(BtnConsultarDespesas);
             AbrirFormularioNoPanel(new FormConsultarDespesas());
+        }
+
+        private void btnConsultarReceitas_Click(object sender, EventArgs e)
+        {
+            DestacarBotao(BtnConsultarReceitas);
+            AbrirFormularioNoPanel(new FormConsultarReceitas());
         }
     }
 }

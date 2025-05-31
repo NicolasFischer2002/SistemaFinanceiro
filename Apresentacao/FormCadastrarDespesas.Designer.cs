@@ -55,6 +55,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
+            panel1.BackColor = SystemColors.ScrollBar;
             panel1.Controls.Add(NumeroParcelas);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(radioButtonDespesaEmAberto);
@@ -266,14 +267,14 @@
             TxtBoxDescricao.Size = new Size(842, 36);
             TxtBoxDescricao.TabIndex = 29;
             // 
-            // FormDespesas
+            // FormCadastrarDespesas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Cyan;
+            BackColor = Color.DimGray;
             ClientSize = new Size(1370, 685);
             Controls.Add(panel1);
-            Name = "FormDespesas";
+            Name = "FormCadastrarDespesas";
             Text = "FormDespesas";
             Load += FormDespesas_Load;
             panel1.ResumeLayout(false);

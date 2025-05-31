@@ -94,5 +94,7 @@ namespace SistemaFinanceiro.Entidades
                     && d.DataVencimento <= datas.DataFinal)
                 .Sum(d => d.Valor);
         }
+
+
     }
 }

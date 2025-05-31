@@ -14,6 +14,7 @@ namespace SistemaFinanceiro
             InicializarLabels();
             InicializarDataPickers();
             InicializarTotalDespesas();
+            InicializarTotalReceitas();
         }
 
         private void InicializarLabels()
@@ -37,7 +38,7 @@ namespace SistemaFinanceiro
 
         private async Task InicializarGraficos()
         {
-            InicializarGraficoGeral();
+            InicializarGraficoReceita();
             InicializarGraficoDespesas();
         }
 
@@ -46,19 +47,20 @@ namespace SistemaFinanceiro
             InicializarGraficos();
         }
 
-        private async void InicializarGraficoGeral()
+        private async void InicializarGraficoReceita()
         {
-            var receitas = await Receita.ObterTodas();
+            var receitas = await Receita.ObterTodas(); 
+            Datas datas = new Datas();
 
-            var dados = new Dictionary<string, double>
-            {
-                ["Salário"] = (double)Receita.ValorSalarios(receitas, new Datas()),
-                ["Alimentação"] = 500,
-                ["Transporte"] = 200,
-                ["Lazer"] = 300
-            };
+            var dados = new Dictionary<string, double>();
 
-            GraficoPizzaService.InicializarExistente(graficoGeral, dados);
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Salário", CategoriaReceita.Salario);
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Bonificação", CategoriaReceita.Bonificacao);
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Prestação Servicos", CategoriaReceita.PrestacaoServicos);
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Comissões", CategoriaReceita.Comissoes);
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Reembolso", CategoriaReceita.Reembolso);            
+          
+            GraficoPizzaService.InicializarExistente(graficoReceita, dados);
         }
 
         private async void InicializarGraficoDespesas()
@@ -68,28 +70,36 @@ namespace SistemaFinanceiro
 
             var dados = new Dictionary<string, double>();
 
-            AdicionarSePositivo(dados, despesas, datas, "Alimentação", CategoriaDespesa.Alimentacao);
-            AdicionarSePositivo(dados, despesas, datas, "Transporte", CategoriaDespesa.Transporte);
-            AdicionarSePositivo(dados, despesas, datas, "Moradia", CategoriaDespesa.Moradia);
-            AdicionarSePositivo(dados, despesas, datas, "Saúde", CategoriaDespesa.Saude);
-            AdicionarSePositivo(dados, despesas, datas, "Educação", CategoriaDespesa.Educacao);
-            AdicionarSePositivo(dados, despesas, datas, "Lazer e Entretenimento", CategoriaDespesa.Lazer);
-            AdicionarSePositivo(dados, despesas, datas, "Viagens", CategoriaDespesa.Viagem);
-            AdicionarSePositivo(dados, despesas, datas, "Vestuário", CategoriaDespesa.Vestuario);
-            AdicionarSePositivo(dados, despesas, datas, "Assinaturas e Streaming", CategoriaDespesa.Assinaturas);
-            AdicionarSePositivo(dados, despesas, datas, "Contas e Serviços (água, luz, internet)", CategoriaDespesa.ContasServicos);
-            AdicionarSePositivo(dados, despesas, datas, "Impostos e Taxas", CategoriaDespesa.Impostos);
-            AdicionarSePositivo(dados, despesas, datas, "Manutenção e Reparos", CategoriaDespesa.Manutencao);
-            AdicionarSePositivo(dados, despesas, datas, "Presentes e Doações", CategoriaDespesa.Presentes);
-            AdicionarSePositivo(dados, despesas, datas, "Outras Despesas", CategoriaDespesa.Outros);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Alimentação", CategoriaDespesa.Alimentacao);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Transporte", CategoriaDespesa.Transporte);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Moradia", CategoriaDespesa.Moradia);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Saúde", CategoriaDespesa.Saude);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Educação", CategoriaDespesa.Educacao);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Lazer e Entretenimento", CategoriaDespesa.Lazer);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Viagens", CategoriaDespesa.Viagem);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Vestuário", CategoriaDespesa.Vestuario);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Assinaturas e Streaming", CategoriaDespesa.Assinaturas);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Contas e Serviços (água, luz, internet)", CategoriaDespesa.ContasServicos);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Impostos e Taxas", CategoriaDespesa.Impostos);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Manutenção e Reparos", CategoriaDespesa.Manutencao);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Presentes e Doações", CategoriaDespesa.Presentes);
+            AdicionarDespesaSePositivo(dados, despesas, datas, "Outras Despesas", CategoriaDespesa.Outros);
 
             GraficoPizzaService.InicializarExistente(graficoDespesas, dados);
         }
 
-        private void AdicionarSePositivo(Dictionary<string, double> dados, List<Despesa> despesas,
+        private void AdicionarDespesaSePositivo(Dictionary<string, double> dados, List<Despesa> despesas,
             Datas datas, string nome, CategoriaDespesa categoria)
         {
             double valor = (double)Despesa.ValorPorCategoria(despesas, datas, categoria);
+            if (valor > 0)
+                dados[nome] = valor;
+        }
+
+        private void AdicionarReceitaSePositivo(Dictionary<string, double> dados, List<Receita> receitas,
+            Datas datas, string nome, CategoriaReceita categoria)
+        {
+            double valor = (double)Receita.ValorPorCategoria(receitas, datas, categoria);
             if (valor > 0)
                 dados[nome] = valor;
         }
@@ -110,9 +120,17 @@ namespace SistemaFinanceiro
             lblTotalDespesas.Text = totalDespesas.ToString("C");
         }
 
+        private async Task InicializarTotalReceitas()
+        {
+            var receitas = await Receita.ObterTodas();
+            decimal totalReceitas = receitas.Sum(d => d.Valor);
+            lblTotalReceitas.Text = totalReceitas.ToString("C"); 
+        }
+
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
             InicializarGraficos();
         }
+    
     }
 }
