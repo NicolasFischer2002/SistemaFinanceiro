@@ -28,32 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gridReceitas = new DataGridView();
             lblTitulo = new Label();
             panelTop = new Panel();
             buttonBuscar = new Button();
             dateTimePickerFinal = new DateTimePicker();
             dateTimePickerInicial = new DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)gridReceitas).BeginInit();
+            panel1 = new Panel();
+            gridReceitas = new DataGridView();
             panelTop.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gridReceitas).BeginInit();
             SuspendLayout();
-            // 
-            // gridReceitas
-            // 
-            gridReceitas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gridReceitas.Dock = DockStyle.Fill;
-            gridReceitas.Location = new Point(0, 0);
-            gridReceitas.Name = "gridReceitas";
-            gridReceitas.Size = new Size(1370, 685);
-            gridReceitas.TabIndex = 1;
-            gridReceitas.CellClick += this.gridReceitas_CellClick;
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Location = new Point(29, 27);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(150, 15);
+            lblTitulo.Size = new Size(145, 15);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Receitas cadastradas entre";
             // 
@@ -97,28 +89,47 @@
             dateTimePickerInicial.Size = new Size(345, 29);
             dateTimePickerInicial.TabIndex = 1;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(gridReceitas);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 80);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1370, 605);
+            panel1.TabIndex = 3;
+            // 
+            // gridReceitas
+            // 
+            gridReceitas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridReceitas.Dock = DockStyle.Fill;
+            gridReceitas.Location = new Point(0, 0);
+            gridReceitas.Name = "gridReceitas";
+            gridReceitas.Size = new Size(1370, 605);
+            gridReceitas.TabIndex = 2;
+            // 
             // FormConsultarReceitas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1370, 685);
+            Controls.Add(panel1);
             Controls.Add(panelTop);
-            Controls.Add(gridReceitas);
             Name = "FormConsultarReceitas";
             Text = "FormConsultarReceita";
-            ((System.ComponentModel.ISupportInitialize)gridReceitas).EndInit();
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)gridReceitas).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private DataGridView gridReceitas;
         private Label lblTitulo;
         private Panel panelTop;
         private Button buttonBuscar;
         private DateTimePicker dateTimePickerFinal;
         private DateTimePicker dateTimePickerInicial;
+        private Panel panel1;
+        private DataGridView gridReceitas;
     }
 }

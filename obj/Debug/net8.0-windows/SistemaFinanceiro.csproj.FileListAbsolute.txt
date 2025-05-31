@@ -71,3 +71,6 @@ C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\Sis
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao..resources
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormConsultarReceitas.resources
 C:\Users\guss\Documents\Facul\POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormEditarReceita.resources
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao..resources
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormConsultarReceitas.resources
+C:\Users\Nicolas Fischer\Documents\Desktop\Aulas 6 Semestre\Trabalho - POO\SistemaFinanceiro\obj\Debug\net8.0-windows\SistemaFinanceiro.Apresentacao.FormEditarReceita.resources

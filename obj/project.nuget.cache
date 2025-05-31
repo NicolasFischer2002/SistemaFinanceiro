@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yf80pGPMhdU=",
+  "dgSpecHash": "Vm+hUfSwRHs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\SistemaFinanceiro.csproj",
+  "projectFilePath": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\SistemaFinanceiro.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\guss\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
+    "C:\\Users\\Nicolas Fischer\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
   ],
   "logs": []
 }
