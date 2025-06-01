@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\",
+  "WorkspaceRootPath": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\formconsultarreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\guss\\documents\\facul\\poo\\sistemafinanceiro\\apresentacao\\formconsultarreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formconsultarreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\guss\\documents\\facul\\poo\\sistemafinanceiro\\apresentacao\\formconsultardespesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formconsultardespesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\guss\\documents\\facul\\poo\\sistemafinanceiro\\apresentacao\\formconsultarreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formconsultarreceitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|c:\\users\\nicolas fischer\\documents\\desktop\\aulas 6 semestre\\trabalho - poo\\sistemafinanceiro\\apresentacao\\formconsultardespesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\apresentacao\\formconsultardespesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9C75A378-F2D0-40F3-96FC-A785832D8A32}|SistemaFinanceiro.csproj|solutionrelative:apresentacao\\formconsultardespesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,33 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormConsultarDespesas.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarDespesas.cs",
+              "DocumentIndex": 3,
+              "Title": "FormConsultarDespesas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarDespesas.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FormConsultarDespesas.cs",
-              "ToolTip": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarDespesas.cs [Projeto]",
-              "RelativeToolTip": "Apresentacao\\FormConsultarDespesas.cs [Projeto]",
+              "ToolTip": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarDespesas.cs [Design]",
+              "RelativeToolTip": "Apresentacao\\FormConsultarDespesas.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T18:22:18.609Z",
               "IsPinned": true,
-              "EditorCaption": " [Projeto]"
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormConsultarReceitas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarReceitas.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FormConsultarReceitas.cs",
+              "ToolTip": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarReceitas.cs [Design]",
+              "RelativeToolTip": "Apresentacao\\FormConsultarReceitas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T18:22:01.492Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormConsultarReceitas.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarReceitas.cs",
+              "Title": "FormConsultarReceitas.cs",
+              "DocumentMoniker": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarReceitas.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FormConsultarReceitas.cs",
-              "ToolTip": "C:\\Users\\Nicolas Fischer\\Documents\\Desktop\\Aulas 6 Semestre\\Trabalho - POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarReceitas.cs [Projeto]",
-              "RelativeToolTip": "Apresentacao\\FormConsultarReceitas.cs [Projeto]",
+              "ToolTip": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarReceitas.cs",
+              "RelativeToolTip": "Apresentacao\\FormConsultarReceitas.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAuwJAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T18:22:01.492Z",
-              "IsPinned": true,
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-06-01T13:33:09.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormConsultarDespesas.cs",
+              "DocumentMoniker": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarDespesas.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FormConsultarDespesas.cs",
+              "ToolTip": "C:\\Users\\guss\\Documents\\Facul\\POO\\SistemaFinanceiro\\Apresentacao\\FormConsultarDespesas.cs",
+              "RelativeToolTip": "Apresentacao\\FormConsultarDespesas.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAWwIsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T13:33:06.123Z",
+              "EditorCaption": ""
             }
           ]
         }

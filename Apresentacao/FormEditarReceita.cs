@@ -99,7 +99,7 @@ namespace SistemaFinanceiro.Apresentacao
         private async void btnInserirDespesa_Click(object sender, EventArgs e)
         {
             DialogResult confirmResult = MessageBox.Show(
-                        "Tem certeza que deseja atualizar esta despesa?",
+                        "Tem certeza que deseja atualizar esta receita?",
                         "Confirmação",
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question
@@ -132,7 +132,7 @@ namespace SistemaFinanceiro.Apresentacao
                 catch (Exception ex)
                 {
                     MessageBox.Show(
-                        "Ocorreu um erro ao atualizar a despesa.\n\n" +
+                        "Ocorreu um erro ao atualizar a receita.\n\n" +
                         "Detalhes técnicos:\n" + ex.Message,
                         "Erro",
                         MessageBoxButtons.OK,
