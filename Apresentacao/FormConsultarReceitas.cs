@@ -121,7 +121,6 @@ namespace SistemaFinanceiro.Apresentacao
             {
                 gridReceitas.Rows.Add(
                     contador,
-                    receita.Id,
                     receita.Valor,
                     receita.CategoriaReceita,
                     receita.Descricao,
