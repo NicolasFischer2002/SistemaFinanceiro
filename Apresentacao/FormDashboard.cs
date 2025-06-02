@@ -15,6 +15,12 @@ namespace SistemaFinanceiro
             InicializarDataPickers();
             InicializarTotalDespesas();
             InicializarTotalReceitas();
+            AjustarScrollBar();
+        }
+
+        private void AjustarScrollBar()
+        {
+            
         }
 
         private void InicializarLabels()
@@ -49,7 +55,7 @@ namespace SistemaFinanceiro
 
         private async void InicializarGraficoReceita()
         {
-            var receitas = await Receita.ObterTodas(new Datas(dateTimePickerInicial.Value, dateTimePickerFinal.Value)); 
+            var receitas = await Receita.ObterTodas(new Datas(dateTimePickerInicial.Value, dateTimePickerFinal.Value));
             Datas datas = new Datas();
 
             var dados = new Dictionary<string, double>();
@@ -129,13 +135,13 @@ namespace SistemaFinanceiro
         {
             var receitas = await Receita.ObterTodas();
             decimal totalReceitas = receitas.Sum(d => d.Valor);
-            lblTotalReceitas.Text = totalReceitas.ToString("C"); 
+            lblTotalReceitas.Text = totalReceitas.ToString("C");
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
             InicializarGraficos();
         }
-    
+
     }
 }
