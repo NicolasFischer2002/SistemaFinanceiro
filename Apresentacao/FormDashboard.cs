@@ -33,7 +33,7 @@ namespace SistemaFinanceiro
 
         private void InicializarLabelTitulo()
         {
-            lblTitulo.Text = "Despesas cadastradas entre as datas";
+            lblTitulo.Text = "Transações cadastradas entre as datas";
             lblTitulo.AutoSize = true;
 
             lblTitulo.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold);

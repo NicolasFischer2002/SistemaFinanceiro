@@ -89,7 +89,7 @@
             // 
             // buttonBuscar
             // 
-            buttonBuscar.Location = new Point(1107, 28);
+            buttonBuscar.Location = new Point(1116, 28);
             buttonBuscar.Name = "buttonBuscar";
             buttonBuscar.Size = new Size(75, 30);
             buttonBuscar.TabIndex = 3;
@@ -100,7 +100,7 @@
             // 
             dateTimePickerFinal.CalendarFont = new Font("Segoe UI", 17F);
             dateTimePickerFinal.Font = new Font("Segoe UI", 12F);
-            dateTimePickerFinal.Location = new Point(740, 28);
+            dateTimePickerFinal.Location = new Point(749, 28);
             dateTimePickerFinal.Name = "dateTimePickerFinal";
             dateTimePickerFinal.Size = new Size(345, 29);
             dateTimePickerFinal.TabIndex = 2;
@@ -109,7 +109,7 @@
             // 
             dateTimePickerInicial.CalendarFont = new Font("Segoe UI", 17F);
             dateTimePickerInicial.Font = new Font("Segoe UI", 12F);
-            dateTimePickerInicial.Location = new Point(379, 28);
+            dateTimePickerInicial.Location = new Point(388, 28);
             dateTimePickerInicial.Name = "dateTimePickerInicial";
             dateTimePickerInicial.Size = new Size(345, 29);
             dateTimePickerInicial.TabIndex = 1;
