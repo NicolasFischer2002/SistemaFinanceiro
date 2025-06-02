@@ -70,6 +70,7 @@
             buttonBuscar.TabIndex = 3;
             buttonBuscar.Text = "Buscar";
             buttonBuscar.UseVisualStyleBackColor = true;
+            buttonBuscar.Click += buttonBuscar_Click_1;
             // 
             // dateTimePickerFinal
             // 
@@ -106,6 +107,7 @@
             gridReceitas.Name = "gridReceitas";
             gridReceitas.Size = new Size(1370, 605);
             gridReceitas.TabIndex = 2;
+            gridReceitas.CellClick += gridReceitas_CellClick_1;
             // 
             // FormConsultarReceitas
             // 

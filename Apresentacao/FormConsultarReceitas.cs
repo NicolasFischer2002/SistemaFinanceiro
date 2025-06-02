@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using SistemaFinanceiro.Apresentacao.Helpers;
+﻿using SistemaFinanceiro.Apresentacao.Helpers;
 using SistemaFinanceiro.Entidades;
+using System.Data;
 
 namespace SistemaFinanceiro.Apresentacao
 {
@@ -62,8 +54,8 @@ namespace SistemaFinanceiro.Apresentacao
             gridReceitas.Columns.Add("Valor", "Valor");
             gridReceitas.Columns.Add("Categoria", "Categoria");
             gridReceitas.Columns.Add("Descricao", "Descrição");
-            gridReceitas.Columns.Add("Data recebimento", "Data rec.");            
-            
+            gridReceitas.Columns.Add("Data recebimento", "Data rec.");
+
 
             // Coluna de imagem: Editar
             DataGridViewImageColumn colEditar = new DataGridViewImageColumn();
@@ -73,7 +65,7 @@ namespace SistemaFinanceiro.Apresentacao
             gridReceitas.Columns.Add(colEditar);
 
             // Coluna de imagem: Excluir
-            DataGridViewImageColumn colExcluir = new DataGridViewImageColumn();           
+            DataGridViewImageColumn colExcluir = new DataGridViewImageColumn();
             colExcluir.Name = "Excluir";
             colExcluir.HeaderText = "Excluir";
             colExcluir.ImageLayout = DataGridViewImageCellLayout.Zoom;
@@ -95,7 +87,7 @@ namespace SistemaFinanceiro.Apresentacao
             gridReceitas.Columns[0].Width = 50;
             gridReceitas.Columns[1].Width = 150;
             gridReceitas.Columns[2].Width = 250;
-            gridReceitas.Columns[3].Width = 130;            
+            gridReceitas.Columns[3].Width = 130;
             gridReceitas.Columns[4].Width = 400;
             gridReceitas.Columns[5].Width = 70;
             gridReceitas.Columns[6].Width = 70;
@@ -124,7 +116,7 @@ namespace SistemaFinanceiro.Apresentacao
                     receita.Valor,
                     receita.CategoriaReceita,
                     receita.Descricao,
-                    receita.DataRecebimento,                 
+                    receita.DataRecebimento,
                     iconeEditar,
                     iconeLixo
                 );
@@ -138,7 +130,17 @@ namespace SistemaFinanceiro.Apresentacao
             gridReceitas.AllowUserToAddRows = false;
         }
 
-        private async void gridReceitas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private async void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            await PreencherGridReceitas();
+        }
+
+        private void InicializarToolTips()
+        {
+            ToolTipService.Set(buttonBuscar, "Buscar baseado na data de vencimento");
+        }
+
+        private async void gridReceitas_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica se a linha e coluna clicadas são válidas
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -180,16 +182,9 @@ namespace SistemaFinanceiro.Apresentacao
             }
         }
 
-        private async void buttonBuscar_Click(object sender, EventArgs e)
+        private async void buttonBuscar_Click_1(object sender, EventArgs e)
         {
             await PreencherGridReceitas();
         }
-
-        private void InicializarToolTips()
-        {
-            ToolTipService.Set(buttonBuscar, "Buscar baseado na data de vencimento");
-        }
-
-
     }
 }

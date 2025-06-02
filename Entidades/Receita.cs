@@ -39,12 +39,20 @@ namespace SistemaFinanceiro.Entidades
                 return new List<Receita>();
 
             var receitas = new List<Receita>();
-            
+
             foreach (var linha in await File.ReadAllLinesAsync(CaminhoArquivoReceitas))
             {
                 if (string.IsNullOrWhiteSpace(linha)) continue;
+
                 var dto = JsonSerializer.Deserialize<ReceitaDTO>(linha)!;
-                receitas.Add(ReceitaMapper.ToDomain(dto));
+                var receita = ReceitaMapper.ToDomain(dto);
+
+                // Se intervalo foi passado, aplica o filtro
+                if (intervalo == null ||
+                    (receita.DataRecebimento >= intervalo.DataInicial && receita.DataRecebimento <= intervalo.DataFinal))
+                {
+                    receitas.Add(receita);
+                }
             }
 
             return receitas;
@@ -59,14 +67,28 @@ namespace SistemaFinanceiro.Entidades
                 .Sum(r => r.Valor);
         }
 
-        public Task DeletarAsync()
+        public async Task DeletarAsync()
         {
-            throw new NotImplementedException();
+            List<Receita> receitas = await ObterTodas();
+            receitas.Remove(receitas.Where(d => d.Id == Id).Single());
+
+            File.WriteAllText(CaminhoArquivoReceitas, string.Empty);
+            await SalvarTodasAsync(receitas);
         }
 
-        public Task AtualizarAsync(Receita novaReceita)
+        private static async Task SalvarTodasAsync(List<Receita> receitas)
         {
-            throw new NotImplementedException();
+            var linhas = receitas.Select(r =>
+                JsonSerializer.Serialize(ReceitaMapper.ToDto(r), new JsonSerializerOptions { WriteIndented = false })
+            );
+
+            await File.WriteAllLinesAsync(CaminhoArquivoReceitas, linhas);
+        }
+
+        public async Task AtualizarAsync(Receita novaReceita)
+        {
+            await DeletarAsync();
+            await novaReceita.CadastrarAsync();
         }
 
         public static decimal ValorPorCategoria(List<Receita> receitas, Datas datas, CategoriaReceita categoria)

@@ -1,21 +1,20 @@
-﻿using System.Data;
-using SistemaFinanceiro.Entidades;
+﻿using SistemaFinanceiro.Entidades;
 using SistemaFinanceiro.Helpers;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data;
 
 namespace SistemaFinanceiro.Apresentacao
 {
     public partial class FormEditarReceita : Form
     {
         private Receita Receita { get; set; }
+
         public FormEditarReceita(Receita receita)
         {
             InitializeComponent();
             Receita = receita;
 
             ImpedirMaximizacaoMinimizacaoForm();
-            CarregarDespesaGUI();
-
+            CarregarReceitaGUI();
         }
 
         private void ImpedirMaximizacaoMinimizacaoForm()
@@ -26,7 +25,7 @@ namespace SistemaFinanceiro.Apresentacao
             FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
-        private void CarregarDespesaGUI()
+        private void CarregarReceitaGUI()
         {
             PreencherTextBoxes();
             PreencherComboBoxes();
@@ -57,7 +56,7 @@ namespace SistemaFinanceiro.Apresentacao
         private void PreencherComboBoxCategoria()
         {
             var listaCategoria = EnumHelper
-                .GetAllValuesAndDescriptions<CategoriaDespesa>()
+                .GetAllValuesAndDescriptions<CategoriaReceita>()
                 .Select(t => new { Value = t.Item1, Description = t.Item2 })
                 .ToList();
 
@@ -95,33 +94,31 @@ namespace SistemaFinanceiro.Apresentacao
             dateTimePicker.Value = Receita.DataRecebimento;
         }
 
-   
-        private async void btnInserirDespesa_Click(object sender, EventArgs e)
+        private async void btnAtualizarReceita_Click(object sender, EventArgs e)
         {
-            DialogResult confirmResult = MessageBox.Show(
+            try
+            {
+                DialogResult confirmResult = MessageBox.Show(
                         "Tem certeza que deseja atualizar esta receita?",
                         "Confirmação",
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question
-            );
+                );
 
-            if (confirmResult == DialogResult.Yes)
-            {
-                try
+                if (confirmResult == DialogResult.Yes)
                 {
                     var status = (StatusTransacao)CbBoxStatus.SelectedValue!;
                     var categoria = (CategoriaReceita)CbBoxCategoria.SelectedValue!;
                     var tipoPago = (TipoPagamento)CbBoxTipo.SelectedValue!;
 
                     Receita novaReceita = new Receita(
-                        statusTransacao: status,
-                        valor: Convert.ToDecimal(TxtBoxValor.Text),
-                        quantidadeParcelas: Convert.ToInt32(NumeroParcelas.Text),
-                        descricao: TxtBoxDescricao.Text,
-                        categoriaReceita: categoria,
-                        dataRecebimento: dateTimePicker.Value,
-                  
-                        tipoPagamento: tipoPago
+                        status,
+                        Convert.ToDecimal(TxtBoxValor.Text),
+                        TxtBoxDescricao.Text,
+                        Convert.ToInt32(NumeroParcelas.Text),
+                        categoria,
+                        dateTimePicker.Value,
+                        tipoPago
                     );
 
                     await Receita.AtualizarAsync(novaReceita);
@@ -129,16 +126,16 @@ namespace SistemaFinanceiro.Apresentacao
                     DialogResult = DialogResult.OK;
                     Close();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(
-                        "Ocorreu um erro ao atualizar a receita.\n\n" +
-                        "Detalhes técnicos:\n" + ex.Message,
-                        "Erro",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error
-                    );
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Ocorreu um erro ao atualizar a receita.\n\n" +
+                    "Detalhes técnicos:\n" + ex.Message,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
     }

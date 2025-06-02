@@ -30,7 +30,7 @@
         {
             NumeroParcelas = new NumericUpDown();
             label1 = new Label();
-            btnAtualizarDespesa = new Button();
+            btnAtualizarReceita = new Button();
             CbBoxTipo = new ComboBox();
             CbBoxCategoria = new ComboBox();
             label6 = new Label();
@@ -68,15 +68,16 @@
             label1.TabIndex = 32;
             label1.Text = "ATUALIZAR RECEITA";
             // 
-            // btnAtualizarDespesa
+            // btnAtualizarReceita
             // 
-            btnAtualizarDespesa.Font = new Font("Segoe UI", 16F);
-            btnAtualizarDespesa.Location = new Point(337, 425);
-            btnAtualizarDespesa.Name = "btnAtualizarDespesa";
-            btnAtualizarDespesa.Size = new Size(300, 70);
-            btnAtualizarDespesa.TabIndex = 30;
-            btnAtualizarDespesa.Text = "ATUALIZAR";
-            btnAtualizarDespesa.UseVisualStyleBackColor = true;
+            btnAtualizarReceita.Font = new Font("Segoe UI", 16F);
+            btnAtualizarReceita.Location = new Point(337, 425);
+            btnAtualizarReceita.Name = "btnAtualizarReceita";
+            btnAtualizarReceita.Size = new Size(300, 70);
+            btnAtualizarReceita.TabIndex = 30;
+            btnAtualizarReceita.Text = "ATUALIZAR";
+            btnAtualizarReceita.UseVisualStyleBackColor = true;
+            btnAtualizarReceita.Click += btnAtualizarReceita_Click;
             // 
             // CbBoxTipo
             // 
@@ -205,7 +206,7 @@
             panel1.Anchor = AnchorStyles.None;
             panel1.Controls.Add(NumeroParcelas);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(btnAtualizarDespesa);
+            panel1.Controls.Add(btnAtualizarReceita);
             panel1.Controls.Add(CbBoxTipo);
             panel1.Controls.Add(CbBoxCategoria);
             panel1.Controls.Add(label6);
@@ -231,7 +232,8 @@
             ClientSize = new Size(972, 546);
             Controls.Add(panel1);
             Name = "FormEditarReceita";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Editar Receita";
             ((System.ComponentModel.ISupportInitialize)NumeroParcelas).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -242,7 +244,7 @@
 
         private NumericUpDown NumeroParcelas;
         private Label label1;
-        private Button btnAtualizarDespesa;
+        private Button btnAtualizarReceita;
         private ComboBox CbBoxTipo;
         private ComboBox CbBoxCategoria;
         private Label label6;

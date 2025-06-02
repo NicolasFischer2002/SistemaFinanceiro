@@ -49,7 +49,7 @@ namespace SistemaFinanceiro
 
         private async void InicializarGraficoReceita()
         {
-            var receitas = await Receita.ObterTodas(); 
+            var receitas = await Receita.ObterTodas(new Datas(dateTimePickerInicial.Value, dateTimePickerFinal.Value)); 
             Datas datas = new Datas();
 
             var dados = new Dictionary<string, double>();
@@ -58,8 +58,13 @@ namespace SistemaFinanceiro
             AdicionarReceitaSePositivo(dados, receitas, datas, "Bonificação", CategoriaReceita.Bonificacao);
             AdicionarReceitaSePositivo(dados, receitas, datas, "Prestação Servicos", CategoriaReceita.PrestacaoServicos);
             AdicionarReceitaSePositivo(dados, receitas, datas, "Comissões", CategoriaReceita.Comissoes);
-            AdicionarReceitaSePositivo(dados, receitas, datas, "Reembolso", CategoriaReceita.Reembolso);            
-          
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Reembolso", CategoriaReceita.Reembolso);
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Venda de Bens", CategoriaReceita.VendaDeBens);
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Juros e Dividendos", CategoriaReceita.JurosDividendos);
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Aluguel", CategoriaReceita.Aluguel);
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Royalties", CategoriaReceita.Royalties);
+            AdicionarReceitaSePositivo(dados, receitas, datas, "Outros", CategoriaReceita.Outros);
+
             GraficoPizzaService.InicializarExistente(graficoReceita, dados);
         }
 
