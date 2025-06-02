@@ -14,6 +14,9 @@ namespace SistemaFinanceiro.Entidades
         Credito,
 
         [Description("Cartão de débito")]
-        Debito
+        Debito,
+
+        [Description("Dinheiro")]
+        Dinheiro
     }
 }

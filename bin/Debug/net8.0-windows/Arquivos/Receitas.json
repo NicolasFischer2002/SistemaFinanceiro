@@ -1,3 +1,4 @@
 {"Id":"85b13416-c098-43ee-a483-b214ccd80326","StatusTransacao":"Quitado","Valor":490,"QuantidadeParcelas":1,"Descricao":"Venda teclado","CategoriaReceita":"VendaDeBens","DataRecebimento":"2025-06-01T21:23:50.088","TipoPagamento":"PIX"}
 {"Id":"5a30ab50-9e71-4c01-b015-4a28bb989692","StatusTransacao":"Quitado","Valor":50,"QuantidadeParcelas":1,"Descricao":"","CategoriaReceita":"Reembolso","DataRecebimento":"2025-06-01T21:26:26.4769244-03:00","TipoPagamento":"PIX"}
 {"Id":"3fecd410-4535-468a-aaf8-888cbce87eac","StatusTransacao":"Estornado","Valor":800,"QuantidadeParcelas":2,"Descricao":"compra mercado livre","CategoriaReceita":"Reembolso","DataRecebimento":"2025-06-01T21:59:04.8518512-03:00","TipoPagamento":"Deposito"}
+{"Id":"ec7fb763-62bf-4c1c-89bd-c8270eeaff80","StatusTransacao":"Quitado","Valor":5,"QuantidadeParcelas":1,"Descricao":"Achei na rua","CategoriaReceita":"Outros","DataRecebimento":"2025-06-02T11:03:49.6217227-03:00","TipoPagamento":"Dinheiro"}
