@@ -20,7 +20,7 @@ namespace SistemaFinanceiro
 
         private void AjustarScrollBar()
         {
-            
+
         }
 
         private void InicializarLabels()
@@ -126,22 +126,23 @@ namespace SistemaFinanceiro
 
         private async Task InicializarTotalDespesas()
         {
-            var despesas = await Despesa.ObterTodas();
+            var despesas = await Despesa.ObterTodas(new Datas(dateTimePickerInicial.Value, dateTimePickerFinal.Value));
             decimal totalDespesas = despesas.Sum(d => d.Valor);
             lblTotalDespesas.Text = totalDespesas.ToString("C");
         }
 
         private async Task InicializarTotalReceitas()
         {
-            var receitas = await Receita.ObterTodas();
+            var receitas = await Receita.ObterTodas(new Datas(dateTimePickerInicial.Value, dateTimePickerFinal.Value));
             decimal totalReceitas = receitas.Sum(d => d.Valor);
             lblTotalReceitas.Text = totalReceitas.ToString("C");
         }
 
-        private void buttonBuscar_Click(object sender, EventArgs e)
+        private void buttonBuscar_Click_1(object sender, EventArgs e)
         {
             InicializarGraficos();
+            InicializarTotalReceitas();
+            InicializarTotalDespesas();
         }
-
     }
 }

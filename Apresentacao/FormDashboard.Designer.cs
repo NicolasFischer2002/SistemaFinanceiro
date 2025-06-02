@@ -95,6 +95,7 @@
             buttonBuscar.TabIndex = 3;
             buttonBuscar.Text = "Buscar";
             buttonBuscar.UseVisualStyleBackColor = true;
+            buttonBuscar.Click += buttonBuscar_Click_1;
             // 
             // dateTimePickerFinal
             // 
